@@ -3,56 +3,443 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <meta name="description" content="Op zoek naar een origineel groepsuitje in Nederland? Ontdek de BorrelChallenge: een hilarische kroegentocht met opdrachten tussen vijf bars." />
-  <title>Origineel groepsuitje: ontdek de BorrelChallenge</title>
+  <meta name="description" content="Voordelige deals voor groepsactiviteiten! BorrelChallenge met 50% korting - Teambuilding, uitjes en meer." />
+  <title>DealSpot - Groepsactiviteiten Deals | Tot 50% Korting</title>
   <style>
-    body { font-family: Arial, sans-serif; line-height: 1.6; margin: 0 auto; max-width: 800px; padding: 2em; background: #fefefe; color: #222; }
-    h1, h2 { color: #990000; }
-    .cta-box { background: #ffeaea; border-left: 6px solid #990000; padding: 1em; margin: 2em 0; }
-    .cta-box strong { font-size: 1.2em; }
-    a.button { background: #990000; color: white; padding: 0.8em 1.2em; text-decoration: none; display: inline-block; border-radius: 5px; margin-top: 1em; }
+    * { margin: 0; padding: 0; box-sizing: border-box; }
+    body { font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; background: #f8f9fa; color: #333; }
+    
+    /* MOBILE FIRST - Header */
+    .header { 
+      background: linear-gradient(135deg, #2c5282, #3182ce); 
+      color: white; 
+      padding: 1.5rem 1rem; 
+      text-align: center; 
+      box-shadow: 0 2px 10px rgba(0,0,0,0.1); 
+    }
+    .header h1 { font-size: 2.2em; margin-bottom: 0.5rem; font-weight: 600; }
+    .header p { font-size: 1.1em; opacity: 0.95; }
+    
+    .container { max-width: 1200px; margin: 0 auto; padding: 1rem; }
+    
+    /* MOBILE FIRST - BorrelChallenge Featured Deal */
+    .featured-deal { 
+      background: linear-gradient(135deg, #4a5568 0%, #2d3748 100%); 
+      color: white; 
+      border-radius: 12px; 
+      padding: 3rem 1.5rem 1.5rem 1.5rem; 
+      margin-bottom: 2rem; 
+      position: relative; 
+      overflow: hidden; 
+      box-shadow: 0 8px 25px rgba(0,0,0,0.15); 
+    }
+    .featured-deal::before { 
+      content: ''; 
+      position: absolute; 
+      top: -50%; 
+      right: -50%; 
+      width: 100%; 
+      height: 100%; 
+      background: radial-gradient(circle, rgba(255,255,255,0.08) 0%, transparent 70%); 
+    }
+    
+    .deal-badge { 
+      position: absolute; 
+      top: 15px; 
+      left: 15px; 
+      background: #e53e3e; 
+      color: white; 
+      padding: 0.5rem 1rem; 
+      border-radius: 6px; 
+      font-weight: 600; 
+      font-size: 0.85em; 
+    }
+    
+    .featured-content h2 { font-size: 1.8em; margin-bottom: 1rem; line-height: 1.3; font-weight: 600; }
+    .featured-content p { font-size: 1rem; margin-bottom: 1rem; line-height: 1.6; opacity: 0.95; }
+    
+    /* Mobile-first image gallery */
+    .image-gallery { 
+      display: grid; 
+      grid-template-columns: 1fr; 
+      gap: 0.8rem; 
+      margin: 1.5rem 0; 
+    }
+    .gallery-img { 
+      width: 100%; 
+      height: 220px; 
+      object-fit: cover; 
+      border-radius: 8px; 
+      transition: transform 0.3s ease; 
+    }
+    .gallery-img:hover { transform: scale(1.02); }
+    
+    /* Mobile-first features */
+    .features { 
+      display: grid; 
+      grid-template-columns: repeat(2, 1fr); 
+      gap: 0.8rem; 
+      margin: 1.5rem 0; 
+    }
+    .feature { 
+      background: rgba(255,255,255,0.15); 
+      padding: 0.8rem; 
+      border-radius: 8px; 
+      text-align: center; 
+    }
+    .feature-icon { font-size: 1.5em; margin-bottom: 0.5rem; }
+    
+    /* Mobile-first pricing */
+    .price-box { 
+      background: rgba(255,255,255,0.15); 
+      padding: 1.2rem; 
+      border-radius: 10px; 
+      margin: 1.5rem 0; 
+      text-align: center;
+    }
+    .old-price { 
+      text-decoration: line-through; 
+      color: rgba(255,255,255,0.7); 
+      font-size: 1.1em; 
+      display: block;
+      margin-bottom: 0.5rem;
+    }
+    .new-price { 
+      font-size: 1.8em; 
+      font-weight: 700; 
+      color: #ff6b35; 
+      display: block;
+      margin-bottom: 0.5rem;
+    }
+    .savings { 
+      background: #e53e3e; 
+      color: white; 
+      padding: 0.4rem 0.8rem; 
+      border-radius: 20px; 
+      font-size: 0.85em; 
+      font-weight: 600;
+      display: inline-block;
+    }
+    
+    /* Mobile-first CTA button */
+    .cta-button { 
+      background: linear-gradient(45deg, #ff6b35, #f7931e); 
+      color: white; 
+      padding: 1.2rem 1rem; 
+      border: none; 
+      border-radius: 8px; 
+      font-size: 1.1em; 
+      font-weight: 600; 
+      cursor: pointer; 
+      text-decoration: none; 
+      display: block; 
+      width: 100%;
+      text-align: center;
+      margin-top: 1rem; 
+      transition: all 0.3s ease; 
+      box-shadow: 0 4px 12px rgba(255, 107, 53, 0.3); 
+      -webkit-tap-highlight-color: transparent;
+      touch-action: manipulation;
+    }
+    .cta-button:hover, .cta-button:active { 
+      transform: translateY(-2px); 
+      box-shadow: 0 6px 20px rgba(255, 107, 53, 0.4); 
+      background: linear-gradient(45deg, #e55a2b, #e6841a);
+    }
+    
+    .validity { 
+      background: rgba(229, 62, 62, 0.2); 
+      color: #fc8181; 
+      padding: 0.5rem 1rem; 
+      border-radius: 6px; 
+      font-size: 0.9em; 
+      margin-top: 1rem; 
+      display: block;
+      text-align: center;
+      border: 1px solid rgba(229, 62, 62, 0.3);
+    }
+    
+    /* Other deals - mobile first */
+    .deals-grid { 
+      display: grid; 
+      grid-template-columns: 1fr; 
+      gap: 1.5rem; 
+      margin-top: 2rem; 
+    }
+    .deal-card { 
+      background: white; 
+      border-radius: 12px; 
+      overflow: hidden; 
+      box-shadow: 0 4px 16px rgba(0,0,0,0.08); 
+      margin-bottom: 1rem;
+      border: 1px solid #e2e8f0;
+    }
+    
+    .deal-image { 
+      height: 180px; 
+      background: linear-gradient(45deg, #667eea, #764ba2); 
+      position: relative; 
+    }
+    .deal-discount { 
+      position: absolute; 
+      top: 15px; 
+      left: 15px; 
+      background: #e53e3e; 
+      color: white; 
+      padding: 0.5rem 0.8rem; 
+      border-radius: 6px; 
+      font-weight: 600; 
+      font-size: 0.9em;
+    }
+    
+    .deal-content { padding: 1.2rem; }
+    .deal-title { font-size: 1.2em; font-weight: 600; margin-bottom: 0.5rem; color: #2d3748; }
+    .deal-description { color: #718096; margin-bottom: 1rem; line-height: 1.5; font-size: 0.95em; }
+    .deal-price { display: flex; align-items: center; margin-bottom: 1rem; }
+    .deal-old-price { text-decoration: line-through; color: #a0aec0; margin-right: 0.5rem; }
+    .deal-new-price { font-size: 1.4em; font-weight: 600; color: #ff6b35; }
+    
+    .deal-button { 
+      background: #4a5568; 
+      color: white; 
+      padding: 0.9rem 1.2rem; 
+      border: none; 
+      border-radius: 6px; 
+      font-weight: 600; 
+      cursor: pointer; 
+      width: 100%; 
+      font-size: 0.95em;
+      transition: background 0.2s ease;
+      -webkit-tap-highlight-color: transparent;
+      touch-action: manipulation;
+    }
+    .deal-button:hover { background: #2d3748; }
+    
+    /* TABLET AND DESKTOP IMPROVEMENTS */
+    @media (min-width: 769px) {
+      .header h1 { font-size: 2.5em; }
+      .header p { font-size: 1.2em; }
+      .header { padding: 2rem 1rem; }
+      .container { padding: 2rem 1rem; }
+      
+      .featured-deal { padding: 3.5rem 2rem 2rem 2rem; margin-bottom: 3rem; }
+      .featured-content h2 { font-size: 2.2em; }
+      .featured-content p { font-size: 1.1em; }
+      
+      .deal-badge { top: 20px; left: 20px; font-size: 0.9em; padding: 0.6rem 1.2rem; }
+      
+      .image-gallery { 
+        grid-template-columns: repeat(3, 1fr); 
+        gap: 1rem; 
+      }
+      .gallery-img { height: 150px; }
+      
+      .features { 
+        grid-template-columns: repeat(4, 1fr); 
+        gap: 1rem; 
+      }
+      .feature { padding: 1rem; }
+      .feature-icon { font-size: 2em; }
+      
+      .price-box { 
+        padding: 1.5rem; 
+        text-align: left;
+      }
+      .old-price { 
+        display: inline; 
+        margin-bottom: 0; 
+        font-size: 1.2em;
+      }
+      .new-price { 
+        display: inline; 
+        font-size: 2em; 
+        margin-left: 1rem; 
+        margin-bottom: 0;
+      }
+      .savings { margin-left: 1rem; }
+      
+      .cta-button { 
+        display: inline-block; 
+        width: auto; 
+        padding: 1rem 2rem; 
+        border-radius: 8px; 
+        font-size: 1.2em; 
+      }
+      
+      .validity { display: inline-block; margin-left: 1rem; }
+      
+      .deals-grid { 
+        grid-template-columns: repeat(auto-fit, minmax(320px, 1fr)); 
+        gap: 2rem; 
+        margin-top: 3rem; 
+      }
+      .deal-content { padding: 1.5rem; }
+      .deal-title { font-size: 1.3em; }
+      .deal-description { font-size: 1em; }
+      .deal-image { height: 200px; }
+    }
+    
+    /* VERY SMALL PHONES */
+    @media (max-width: 480px) {
+      .header h1 { font-size: 1.8em; }
+      .header p { font-size: 1em; }
+      
+      .featured-deal { padding: 3rem 1.2rem 1.2rem 1.2rem; }
+      .featured-content h2 { font-size: 1.5em; }
+      
+      .features { grid-template-columns: 1fr; }
+      .gallery-img { height: 200px; }
+      
+      .price-box { padding: 1rem; }
+      .new-price { font-size: 1.6em; }
+      
+      .cta-button { padding: 1rem; font-size: 1rem; }
+    }
   </style>
 </head>
 <body>
-
-  <h1>Op zoek naar een origineel groepsuitje? De BorrelChallenge is wat je zoekt</h1>
-
-  <p>Een standaard kroegentocht is leuk. Maar weet je wat nog véél leuker is? Een interactieve, hilarische en soms ronduit gênante uitdaging tussen vijf toffe bars. 🎉</p>
-
-  <p>Maak kennis met de <strong>BorrelChallenge</strong>: dé zelfgeleide kroegentocht waarbij jullie onderweg opdrachten uitvoeren, punten verdienen en elkaar compleet voor schut zetten. Denk: flauwe opdrachten, sociale uitdagingen en flink wat gelach onderweg. Ideaal voor vriendengroepen, teamuitjes of verjaardagen.</p>
-
-  <h2>Hoe werkt het?</h2>
-  <p>Je start bij <strong>Barlow's</strong> in hartje Den Haag en bezoekt vijf bars in totaal: allemaal hand-picked op sfeer en gezelligheid. Onderweg van de ene bar naar de volgende — ongeveer 5 tot 10 minuten lopen — krijgt één iemand in de groep een opdracht op z’n telefoon. Wie is de show-off, wie de durfal, en wie speelt op safe?</p>
-
-  <p>Je kiest je stijl: de <em>Talker</em>, de <em>Show-Off</em> of de <em>Doer</em>. Hoe gewaagder je opdracht, hoe meer punten je scoort.</p>
-
-  <div class="cta-box">
-    <strong>🎁 50% korting voor snelle beslissers</strong>
-    <p>Boek nu en ontvang tijdelijk <strong>50% korting</strong> met actiecode <code>BORREL50</code>. Alleen geldig voor boekingen via onze website.</p>
-    <a class="button" href="https://jouwwebsite.nl/borrelchallenge">Claim je korting</a>
+  <div class="header">
+    <h1>DealSpot</h1>
+    <p>Betrouwbare deals voor groepsactiviteiten</p>
   </div>
-
-  <h2>Wat heb je nodig?</h2>
-  <ul>
-    <li>Een groep van 4 tot 8 personen (meer mag ook, maar dan splits je op)</li>
-    <li>1 telefoon met internetverbinding voor de opdrachten</li>
-    <li>Goede zin. En een beetje lef.</li>
-  </ul>
-
-  <h2>Waarom dit groepsuitje boeken?</h2>
-  <ul>
-    <li>Je speelt op je eigen tempo, zonder gids</li>
-    <li>Altijd op wandelafstand (alles in het centrum)</li>
-    <li>Perfect voor vriendenuitejs, vrijgezellenfeesten of verjaardagen</li>
-  </ul>
-
-  <p>De BorrelChallenge is geen standaard pubcrawl. Het is een beleving. En eentje die je niet snel vergeet.</p>
-
-  <div class="cta-box">
-    <strong>Klaar voor de uitdaging?</strong>
-    <p>Gebruik code <code>BORREL50</code> voor 50% korting en boek jullie avontuur nu.</p>
-    <a class="button" href="https://jouwwebsite.nl/borrelchallenge">Boek de BorrelChallenge</a>
+  
+  <div class="container">
+    <!-- FEATURED DEAL - BORRELCHALLENGE -->
+    <div class="featured-deal">
+      <div class="deal-badge">AANBIEDING</div>
+      <div class="featured-content">
+        <h2>🍻 BorrelChallenge - Het Ultieme Groepsuitje</h2>
+        <p>Een interactieve kroegentocht door 5 zorgvuldig geselecteerde bars. Met uitdagende opdrachten en veel plezier. Ideaal voor vrijgezellenfeesten, teamuitjes en verjaardagen.</p>
+        
+        <div class="image-gallery">
+          <img src="https://images.pexels.com/photos/32333373/pexels-photo-32333373/free-photo-of-vrolijk-verjaardagsfeest-met-vrienden-binnen.jpeg?auto=compress&cs=tinysrgb&w=600" alt="Vrienden die samen plezier hebben tijdens de BorrelChallenge" class="gallery-img">
+          <img src="https://images.pexels.com/photos/1269025/pexels-photo-1269025.jpeg?auto=compress&cs=tinysrgb&w=600" alt="Gezellige bar sfeer tijdens de BorrelChallenge" class="gallery-img">
+          <img src="https://images.pexels.com/photos/6224699/pexels-photo-6224699.jpeg?auto=compress&cs=tinysrgb&w=600" alt="Groep vrienden die samen borrelen" class="gallery-img">
+        </div>
+        
+        <div class="features">
+          <div class="feature">
+            <div class="feature-icon">👥</div>
+            <div>4-8 personen</div>
+          </div>
+          <div class="feature">
+            <div class="feature-icon">📱</div>
+            <div>App-gestuurd</div>
+          </div>
+          <div class="feature">
+            <div class="feature-icon">🎯</div>
+            <div>Opdrachten & Punten</div>
+          </div>
+          <div class="feature">
+            <div class="feature-icon">🚶</div>
+            <div>Eigen tempo</div>
+          </div>
+        </div>
+        
+        <div class="price-box">
+          <span class="old-price">€59,99</span>
+          <span class="new-price">€29,99</span>
+          <span class="savings">50% KORTING</span>
+          <div class="validity">Geldig tot 15 juni 2025</div>
+        </div>
+        
+        <a href="https://buy.stripe.com/cN2dUjfgo9vK7kI9AC?prefilled_promo_code=MEGADEALS" class="cta-button">Reserveer Nu</a>
+        <p style="margin-top: 1rem; font-size: 0.9em; opacity: 0.9; text-align: center;">Code: <strong>BORREL50</strong> | Direct speelbaar | 14 dagen bedenktijd</p>
+      </div>
+    </div>
+    
+    <!-- OTHER DEALS -->
+    <div class="deals-grid">
+      <div class="deal-card">
+        <div class="deal-image">
+          <div class="deal-discount">-30%</div>
+        </div>
+        <div class="deal-content">
+          <h3 class="deal-title">Escape Room Experience</h3>
+          <p class="deal-description">Klassieke escape room voor 2-6 personen. Verschillende thema's beschikbaar in meerdere steden.</p>
+          <div class="deal-price">
+            <span class="deal-old-price">€69</span>
+            <span class="deal-new-price">€49</span>
+          </div>
+          <button class="deal-button">Meer Info</button>
+        </div>
+      </div>
+      
+      <div class="deal-card">
+        <div class="deal-image">
+          <div class="deal-discount">-25%</div>
+        </div>
+        <div class="deal-content">
+          <h3 class="deal-title">Paintball Avontuur</h3>
+          <p class="deal-description">3 uur paintball actie inclusief uitrusting en 200 paintballs per persoon. Minimum 8 personen.</p>
+          <div class="deal-price">
+            <span class="deal-old-price">€32</span>
+            <span class="deal-new-price">€24</span>
+          </div>
+          <button class="deal-button">Meer Info</button>
+        </div>
+      </div>
+      
+      <div class="deal-card">
+        <div class="deal-image">
+          <div class="deal-discount">-20%</div>
+        </div>
+        <div class="deal-content">
+          <h3 class="deal-title">Karaoke Party</h3>
+          <p class="deal-description">2 uur private karaoke kamer voor maximaal 12 personen inclusief welkomstdrankje.</p>
+          <div class="deal-price">
+            <span class="deal-old-price">€110</span>
+            <span class="deal-new-price">€88</span>
+          </div>
+          <button class="deal-button">Meer Info</button>
+        </div>
+      </div>
+      
+      <div class="deal-card">
+        <div class="deal-image">
+          <div class="deal-discount">-25%</div>
+        </div>
+        <div class="deal-content">
+          <h3 class="deal-title">Bowlen & Bites</h3>
+          <p class="deal-description">2 uur bowlen + hapjes pakket voor 4-8 personen. Inclusief schoenen en drankje.</p>
+          <div class="deal-price">
+            <span class="deal-old-price">€140</span>
+            <span class="deal-new-price">€105</span>
+          </div>
+          <button class="deal-button">Meer Info</button>
+        </div>
+      </div>
+      
+      <div class="deal-card">
+        <div class="deal-image">
+          <div class="deal-discount">-30%</div>
+        </div>
+        <div class="deal-content">
+          <h3 class="deal-title">Laser Tag Battle</h3>
+          <p class="deal-description">45 minuten laser tag in moderne arena. Team-building games en statistieken bijgehouden.</p>
+          <div class="deal-price">
+            <span class="deal-old-price">€18</span>
+            <span class="deal-new-price">€13</span>
+          </div>
+          <button class="deal-button">Meer Info</button>
+        </div>
+      </div>
+      
+      <div class="deal-card">
+        <div class="deal-image">
+          <div class="deal-discount">-15%</div>
+        </div>
+        <div class="deal-content">
+          <h3 class="deal-title">Mini Golf & Drinks</h3>
+          <p class="deal-description">Adventure golf parcours + welkomstdrankje. Perfect voor een relaxte middag met vrienden.</p>
+          <div class="deal-price">
+            <span class="deal-old-price">€23</span>
+            <span class="deal-new-price">€20</span>
+          </div>
+          <button class="deal-button">Meer Info</button>
+        </div>
+      </div>
+    </div>
   </div>
-
 </body>
 </html>
