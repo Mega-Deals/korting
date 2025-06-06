@@ -5,97 +5,96 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
   <meta name="description" content="Voordelige deals voor groepsactiviteiten! BorrelChallenge met 50% korting - Teambuilding, uitjes en meer." />
   <title>DealSpot - Groepsactiviteiten Deals | Tot 50% Korting</title>
-  <style>
+<style>
     * { margin: 0; padding: 0; box-sizing: border-box; }
-    body { font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; background: #f8f9fa; color: #333; }
+    body { font-family: 'Arial', sans-serif; background: #f4f6f8; color: #333; }
     
     /* MOBILE FIRST - Header */
     .header { 
-      background: linear-gradient(135deg, #2c5282, #3182ce); 
+      background: linear-gradient(135deg, #00b894, #00a085); 
       color: white; 
       padding: 1.5rem 1rem; 
       text-align: center; 
-      box-shadow: 0 2px 10px rgba(0,0,0,0.1); 
+      box-shadow: 0 2px 8px rgba(0,0,0,0.1); 
     }
-    .header h1 { font-size: 2.2em; margin-bottom: 0.5rem; font-weight: 600; }
-    .header p { font-size: 1.1em; opacity: 0.95; }
+    .header h1 { font-size: 2.2em; margin-bottom: 0.5rem; font-weight: 700; }
+    .header p { font-size: 1.1em; opacity: 0.9; font-weight: 400; }
     
     .container { max-width: 1200px; margin: 0 auto; padding: 1rem; }
     
     /* MOBILE FIRST - BorrelChallenge Featured Deal */
     .featured-deal { 
-      background: linear-gradient(135deg, #4a5568 0%, #2d3748 100%); 
-      color: white; 
-      border-radius: 12px; 
-      padding: 3rem 1.5rem 1.5rem 1.5rem; 
+      background: white; 
+      color: #333; 
+      border-radius: 8px; 
+      padding: 0; 
       margin-bottom: 2rem; 
       position: relative; 
       overflow: hidden; 
-      box-shadow: 0 8px 25px rgba(0,0,0,0.15); 
+      box-shadow: 0 2px 12px rgba(0,0,0,0.08); 
+      border: 1px solid #e8eaed;
     }
     .featured-deal::before { 
-      content: ''; 
-      position: absolute; 
-      top: -50%; 
-      right: -50%; 
-      width: 100%; 
-      height: 100%; 
-      background: radial-gradient(circle, rgba(255,255,255,0.08) 0%, transparent 70%); 
+      content: none; 
     }
     
     .deal-badge { 
       position: absolute; 
-      top: 15px; 
-      right: 15px; 
-      background: #e53e3e; 
+      top: 10px; 
+      right: 10px; 
+      background: #ff6b6b; 
       color: white; 
-      padding: 0.5rem 1rem; 
-      border-radius: 6px; 
+      padding: 0.4rem 0.8rem; 
+      border-radius: 20px; 
       font-weight: 600; 
-      font-size: 0.85em; 
+      font-size: 0.8em; 
+      z-index: 10;
     }
     
-    .featured-content h2 { font-size: 1.8em; margin-bottom: 1rem; line-height: 1.3; font-weight: 600; }
-    .featured-content p { font-size: 1rem; margin-bottom: 1rem; line-height: 1.6; opacity: 0.95; }
+    .featured-content { padding: 1.5rem 1.5rem 1.5rem 1.5rem; }
+    .featured-content h2 { font-size: 1.8em; margin-bottom: 1rem; margin-top: 1rem; line-height: 1.3; font-weight: 600; color: #2c3e50; }
+    .featured-content p { font-size: 1rem; margin-bottom: 1rem; line-height: 1.6; color: #666; }
     
     /* Toggle buttons */
     .toggle-buttons {
       display: flex;
-      gap: 1rem;
+      gap: 0.5rem;
       margin: 1.5rem 0;
       flex-wrap: wrap;
     }
     
     .toggle-btn {
-      background: rgba(255,255,255,0.15);
-      color: white;
-      border: 2px solid rgba(255,255,255,0.3);
-      padding: 0.7rem 1.2rem;
-      border-radius: 8px;
+      background: #f8f9fa;
+      color: #666;
+      border: 1px solid #e8eaed;
+      padding: 0.6rem 1rem;
+      border-radius: 20px;
       cursor: pointer;
-      font-size: 0.9em;
+      font-size: 0.85em;
       font-weight: 500;
-      transition: all 0.3s ease;
+      transition: all 0.2s ease;
       display: flex;
       align-items: center;
-      gap: 0.5rem;
+      gap: 0.4rem;
       -webkit-tap-highlight-color: transparent;
       touch-action: manipulation;
     }
     
     .toggle-btn:hover {
-      background: rgba(255,255,255,0.25);
-      border-color: rgba(255,255,255,0.4);
+      background: #e9ecef;
+      border-color: #dee2e6;
     }
     
     .toggle-btn.active {
-      background: rgba(255,255,255,0.3);
-      border-color: rgba(255,255,255,0.5);
-      transform: scale(1.02);
+      background: #00b894;
+      border-color: #00b894;
+      color: white;
+      transform: none;
     }
     
     .toggle-icon {
-      transition: transform 0.3s ease;
+      transition: transform 0.2s ease;
+      font-size: 0.7em;
     }
     
     .toggle-btn.active .toggle-icon {
@@ -106,23 +105,30 @@
     .toggle-content {
       max-height: 0;
       overflow: hidden;
-      transition: max-height 0.4s ease-out, opacity 0.3s ease-out;
+      transition: max-height 0.3s ease-out, opacity 0.2s ease-out;
       opacity: 0;
-      background: rgba(255,255,255,0.1);
+      background: #f8f9fa;
       border-radius: 8px;
       margin: 1rem 0;
+      padding: 0 1.5rem;
+      will-change: max-height, opacity;
     }
     
     .toggle-content.active {
-      max-height: 1000px;
-      opacity: 1;
-      padding: 1.5rem;
+     max-height: 1000px;
+     opacity: 1;
     }
-    
+
+    .toggle-buttons {
+     position: relative;
+     z-index: 10;
+    }
+
     .more-info-content h3 {
-      color: #ff6b35;
-      font-size: 1.2em;
+      color: #00b894;
+      font-size: 1.1em;
       margin-bottom: 1rem;
+      margin-top: 1rem;
       font-weight: 600;
     }
     
@@ -131,16 +137,17 @@
     }
     
     .info-section h4 {
-      color: #ffd700;
-      font-size: 1em;
+      color: #2c3e50;
+      font-size: 0.95em;
       margin-bottom: 0.5rem;
+      margin-top: 1rem;
       font-weight: 600;
     }
     
     .info-section p, .info-section ul {
-      font-size: 0.95em;
+      font-size: 0.9em;
       line-height: 1.6;
-      opacity: 0.9;
+      color: #666;
     }
     
     .info-section ul {
@@ -154,18 +161,19 @@
     
     /* Reviews styling */
     .reviews-content h3 {
-      color: #ff6b35;
-      font-size: 1.2em;
+      color: #00b894;
+      font-size: 1.1em;
       margin-bottom: 1rem;
+      margin-top: 1rem;
       font-weight: 600;
     }
     
     .review {
-      background: rgba(255,255,255,0.1);
+      background: white;
       padding: 1rem;
       border-radius: 8px;
       margin-bottom: 1rem;
-      border-left: 4px solid #ffd700;
+      border: 1px solid #e8eaed;
     }
     
     .review-header {
@@ -178,23 +186,23 @@
     
     .reviewer-name {
       font-weight: 600;
-      color: #ffd700;
+      color: #2c3e50;
     }
     
     .review-rating {
-      color: #ffd700;
-      font-size: 1.1em;
+      color: #ffc107;
+      font-size: 1em;
     }
     
     .review-text {
-      font-size: 0.95em;
+      font-size: 0.9em;
       line-height: 1.5;
-      opacity: 0.9;
+      color: #666;
     }
     
     .review-date {
       font-size: 0.8em;
-      opacity: 0.7;
+      color: #999;
       margin-top: 0.5rem;
     }
     
@@ -202,7 +210,7 @@
     .image-gallery { 
       display: grid; 
       grid-template-columns: 1fr; 
-      gap: 0.8rem; 
+      gap: 0.5rem; 
       margin: 1.5rem 0; 
     }
     .gallery-img { 
@@ -210,9 +218,9 @@
       height: 220px; 
       object-fit: cover; 
       border-radius: 8px; 
-      transition: transform 0.3s ease; 
+      transition: transform 0.2s ease; 
     }
-    .gallery-img:hover { transform: scale(1.02); }
+    .gallery-img:hover { transform: scale(1.01); }
     
     /* Mobile-first features */
     .features { 
@@ -222,24 +230,26 @@
       margin: 1.5rem 0; 
     }
     .feature { 
-      background: rgba(255,255,255,0.15); 
-      padding: 0.8rem; 
+      background: #f8f9fa; 
+      padding: 1rem; 
       border-radius: 8px; 
       text-align: center; 
+      border: 1px solid #e8eaed;
     }
-    .feature-icon { font-size: 1.5em; margin-bottom: 0.5rem; }
+    .feature-icon { font-size: 1.5em; margin-bottom: 0.5rem; color: #00b894; }
     
     /* Mobile-first pricing */
     .price-box { 
-      background: rgba(255,255,255,0.15); 
+      background: #f8f9fa; 
       padding: 1.2rem; 
-      border-radius: 10px; 
+      border-radius: 8px; 
       margin: 1.5rem 0; 
       text-align: center;
+      border: 1px solid #e8eaed;
     }
     .old-price { 
       text-decoration: line-through; 
-      color: rgba(255,255,255,0.7); 
+      color: #999; 
       font-size: 1.1em; 
       display: block;
       margin-bottom: 0.5rem;
@@ -247,27 +257,27 @@
     .new-price { 
       font-size: 1.8em; 
       font-weight: 700; 
-      color: #ff6b35; 
+      color: #00b894; 
       display: block;
       margin-bottom: 0.5rem;
     }
     .savings { 
-      background: #e53e3e; 
+      background: #ff6b6b; 
       color: white; 
-      padding: 0.4rem 0.8rem; 
-      border-radius: 20px; 
-      font-size: 0.85em; 
+      padding: 0.3rem 0.8rem; 
+      border-radius: 15px; 
+      font-size: 0.8em; 
       font-weight: 600;
       display: inline-block;
     }
     
     /* Mobile-first CTA button */
     .cta-button { 
-      background: linear-gradient(45deg, #ff6b35, #f7931e); 
+      background: #00b894; 
       color: white; 
-      padding: 1.2rem 1rem; 
+      padding: 1rem 1rem; 
       border: none; 
-      border-radius: 8px; 
+      border-radius: 25px; 
       font-size: 1.1em; 
       font-weight: 600; 
       cursor: pointer; 
@@ -276,27 +286,27 @@
       width: 100%;
       text-align: center;
       margin-top: 1rem; 
-      transition: all 0.3s ease; 
-      box-shadow: 0 4px 12px rgba(255, 107, 53, 0.3); 
+      transition: all 0.2s ease; 
+      box-shadow: 0 2px 8px rgba(0, 184, 148, 0.3); 
       -webkit-tap-highlight-color: transparent;
       touch-action: manipulation;
     }
     .cta-button:hover, .cta-button:active { 
-      transform: translateY(-2px); 
-      box-shadow: 0 6px 20px rgba(255, 107, 53, 0.4); 
-      background: linear-gradient(45deg, #e55a2b, #e6841a);
+      background: #00a085;
+      transform: translateY(-1px); 
+      box-shadow: 0 4px 12px rgba(0, 184, 148, 0.4); 
     }
     
     .validity { 
-      background: rgba(229, 62, 62, 0.2); 
-      color: #fc8181; 
+      background: #fff3cd; 
+      color: #856404; 
       padding: 0.5rem 1rem; 
       border-radius: 6px; 
-      font-size: 0.9em; 
+      font-size: 0.85em; 
       margin-top: 1rem; 
       display: block;
       text-align: center;
-      border: 1px solid rgba(229, 62, 62, 0.3);
+      border: 1px solid #ffeaa7;
     }
     
     /* Other deals - mobile first */
@@ -308,52 +318,52 @@
     }
     .deal-card { 
       background: white; 
-      border-radius: 12px; 
+      border-radius: 8px; 
       overflow: hidden; 
-      box-shadow: 0 4px 16px rgba(0,0,0,0.08); 
+      box-shadow: 0 2px 8px rgba(0,0,0,0.08); 
       margin-bottom: 1rem;
-      border: 1px solid #e2e8f0;
+      border: 1px solid #e8eaed;
     }
     
     .deal-image { 
       height: 180px; 
-      background: linear-gradient(45deg, #667eea, #764ba2); 
+      background: linear-gradient(45deg, #00b894, #00a085); 
       position: relative; 
     }
     .deal-discount { 
       position: absolute; 
-      top: 15px; 
-      left: 15px; 
-      background: #e53e3e; 
+      top: 10px; 
+      left: 10px; 
+      background: #ff6b6b; 
       color: white; 
-      padding: 0.5rem 0.8rem; 
-      border-radius: 6px; 
+      padding: 0.4rem 0.8rem; 
+      border-radius: 15px; 
       font-weight: 600; 
-      font-size: 0.9em;
+      font-size: 0.8em;
     }
     
     .deal-content { padding: 1.2rem; }
-    .deal-title { font-size: 1.2em; font-weight: 600; margin-bottom: 0.5rem; color: #2d3748; }
-    .deal-description { color: #718096; margin-bottom: 1rem; line-height: 1.5; font-size: 0.95em; }
+    .deal-title { font-size: 1.1em; font-weight: 600; margin-bottom: 0.5rem; color: #2c3e50; }
+    .deal-description { color: #666; margin-bottom: 1rem; line-height: 1.5; font-size: 0.9em; }
     .deal-price { display: flex; align-items: center; margin-bottom: 1rem; }
-    .deal-old-price { text-decoration: line-through; color: #a0aec0; margin-right: 0.5rem; }
-    .deal-new-price { font-size: 1.4em; font-weight: 600; color: #ff6b35; }
+    .deal-old-price { text-decoration: line-through; color: #999; margin-right: 0.5rem; font-size: 0.9em; }
+    .deal-new-price { font-size: 1.3em; font-weight: 600; color: #00b894; }
     
     .deal-button { 
-      background: #4a5568; 
+      background: #00b894; 
       color: white; 
-      padding: 0.9rem 1.2rem; 
+      padding: 0.8rem 1.2rem; 
       border: none; 
-      border-radius: 6px; 
+      border-radius: 20px; 
       font-weight: 600; 
       cursor: pointer; 
       width: 100%; 
-      font-size: 0.95em;
+      font-size: 0.9em;
       transition: background 0.2s ease;
       -webkit-tap-highlight-color: transparent;
       touch-action: manipulation;
     }
-    .deal-button:hover { background: #2d3748; }
+    .deal-button:hover { background: #00a085; }
     
     /* TABLET AND DESKTOP IMPROVEMENTS */
     @media (min-width: 769px) {
@@ -362,19 +372,20 @@
       .header { padding: 2rem 1rem; }
       .container { padding: 2rem 1rem; }
       
-      .featured-deal { padding: 3.5rem 2rem 2rem 2rem; margin-bottom: 3rem; }
+      .featured-deal { margin-bottom: 3rem; }
+      .featured-content { padding: 2rem; }
       .featured-content h2 { font-size: 2.2em; }
       .featured-content p { font-size: 1.1em; }
       
-      .deal-badge { top: 20px; left: 20px; font-size: 0.9em; padding: 0.6rem 1.2rem; }
+      .deal-badge { top: 20px; right: 20px; font-size: 0.85em; padding: 0.5rem 1rem; }
       
       .toggle-buttons {
         flex-wrap: nowrap;
       }
       
       .toggle-btn {
-        font-size: 1em;
-        padding: 0.8rem 1.5rem;
+        font-size: 0.9em;
+        padding: 0.7rem 1.2rem;
       }
       
       .image-gallery { 
@@ -387,7 +398,7 @@
         grid-template-columns: repeat(4, 1fr); 
         gap: 1rem; 
       }
-      .feature { padding: 1rem; }
+      .feature { padding: 1.2rem; }
       .feature-icon { font-size: 2em; }
       
       .price-box { 
@@ -411,7 +422,7 @@
         display: inline-block; 
         width: auto; 
         padding: 1rem 2rem; 
-        border-radius: 8px; 
+        border-radius: 25px; 
         font-size: 1.2em; 
       }
       
@@ -423,8 +434,8 @@
         margin-top: 3rem; 
       }
       .deal-content { padding: 1.5rem; }
-      .deal-title { font-size: 1.3em; }
-      .deal-description { font-size: 1em; }
+      .deal-title { font-size: 1.2em; }
+      .deal-description { font-size: 0.95em; }
       .deal-image { height: 200px; }
       
       .review-header {
@@ -437,7 +448,7 @@
       .header h1 { font-size: 1.8em; }
       .header p { font-size: 1em; }
       
-      .featured-deal { padding: 3rem 1.2rem 1.2rem 1.2rem; }
+      .featured-content { padding: 1.5rem 1.2rem 1.2rem 1.2rem; }
       .featured-content h2 { font-size: 1.5em; }
       
       .toggle-buttons {
@@ -479,16 +490,16 @@
         <h2>🍻 BorrelChallenge - Het Ultieme Groepsuitje</h2>
         <p>Een interactieve kroegentocht door 5 zorgvuldig geselecteerde bars. Met uitdagende opdrachten en veel plezier. Ideaal voor vrijgezellenfeesten, teamuitjes en verjaardagen.</p>
         
-        <div class="toggle-buttons">
-          <button class="toggle-btn" onclick="toggleContent('moreInfo')">
-            <span>Meer Info</span>
-            <span class="toggle-icon">▼</span>
-          </button>
-          <button class="toggle-btn" onclick="toggleContent('reviews')">
-            <span>Reviews</span>
-            <span class="toggle-icon">▼</span>
-          </button>
-        </div>
+         <div class="toggle-buttons">
+ 	  <button class="toggle-btn" onclick="toggleContent(this, 'moreInfo')">
+   	   <span>Meer Info</span>
+   	   <span class="toggle-icon">▼</span>
+	  </button>
+	  <button class="toggle-btn" onclick="toggleContent(this, 'reviews')">
+  	   <span>Reviews</span>
+  	   <span class="toggle-icon">▼</span>
+  	 </button>
+	</div>
         
         <div id="moreInfo" class="toggle-content">
           <div class="more-info-content">
@@ -710,31 +721,26 @@
     </div>
   </div>
 
- <script>
-   function toggleContent(contentId) {
+<script>
+  function toggleContent(button, contentId) {
    const content = document.getElementById(contentId);
-   const button = event.target.closest('.toggle-btn');
-  
-   if (!content || !button) return;
-  
-   // Toggle de content
-   if (content.classList.contains('active')) {
-     content.classList.remove('active');
-     button.classList.remove('active');
-   } else {
-     // Sluit alle andere open content secties
-     document.querySelectorAll('.toggle-content.active').forEach(el => {
-       el.classList.remove('active');
-     });
-     document.querySelectorAll('.toggle-btn.active').forEach(el => {
-       el.classList.remove('active');
-     });
-    
-     // Open de geklickte content
-     content.classList.add('active');
-     button.classList.add('active');
-   }
- }
- </script>
+
+
+    if (!content || !button) return;
+
+    const isActive = content.classList.contains('active');
+
+    // Sluit alle actieve secties
+    document.querySelectorAll('.toggle-content.active').forEach(el => el.classList.remove('active'));
+    document.querySelectorAll('.toggle-btn.active').forEach(el => el.classList.remove('active'));
+
+    // Open de gewenste als die nog niet open was
+    if (!isActive) {
+      content.classList.add('active');
+      button.classList.add('active');
+    }
+  }
+</script>
+
 </body>
 </html>
