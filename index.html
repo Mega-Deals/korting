@@ -52,7 +52,7 @@
     }
     
     .featured-content { padding: 1.5rem 1.5rem 1.5rem 1.5rem; }
-    .featured-content h2 { font-size: 1.8em; margin-bottom: 1rem; margin-top: 1rem; line-height: 1.3; font-weight: 600; color: #2c3e50; }
+    .featured-content h2 { font-size: 1.8em; margin-bottom: 1rem; margin-top: 2rem; line-height: 1.3; font-weight: 800; color: #2c3e50; text-align: center; }
     .featured-content p { font-size: 1rem; margin-bottom: 1rem; line-height: 1.6; color: #666; }
     
 	/* Toggle buttons */
@@ -273,30 +273,46 @@
     }
     
     /* Mobile-first CTA button */
-    .cta-button { 
-      background: #2196f3; 
-      color: white; 
-      padding: 1rem 1rem; 
-      border: none; 
-      border-radius: 25px; 
-      font-size: 1.1em; 
-      font-weight: 600; 
-      cursor: pointer; 
-      text-decoration: none; 
-      display: block; 
-      width: 100%;
+    .cta-button {
+      position: fixed;
+      bottom: 1rem;
+      left: 50%;
+      transform: translateX(-50%);
+      z-index: 1000;
+    
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+    
+      background: #2196f3;
+      color: white;
+      padding: 0.9rem 1.4rem;
+      border-radius: 25px;
+      font-size: 1.1em;
+      font-weight: 600;
       text-align: center;
-      margin-top: 1rem; 
-      transition: all 0.2s ease; 
-      box-shadow: 0 2px 8px rgba(33, 150, 243, 0.3); 
-      -webkit-tap-highlight-color: transparent;
-      touch-action: manipulation;
+      text-decoration: none;
+      box-shadow: 0 2px 8px rgba(0, 0, 0, 0.2);
+        opacity: 1;
+      transition: opacity 0.5s ease;
+      pointer-events: auto;
+    
+      width: calc(100% - 2rem);
+      max-width: 400px;
     }
-    .cta-button:hover, .cta-button:active { 
-      background: #1976d2;
-      transform: translateY(-1px); 
-      box-shadow: 0 4px 12px rgba(33, 150, 243, 0.4); 
+    
+    .cta-button.hidden {
+      opacity: 0;
+      pointer-events: none;
     }
+    
+    .cta-button small {
+      font-size: 0.8em;
+      font-weight: 400;
+      margin-top: 0.3rem;
+      color: #f0f0f0;
+    }
+    .cta-button:hover { background: #1976d2; }
     
     .validity { 
       background: #fff3cd; 
@@ -315,7 +331,9 @@
       display: grid; 
       grid-template-columns: 1fr; 
       gap: 1.5rem; 
-      margin-top: 2rem; 
+      margin-top: 2rem;
+      margin-left: 1rem;
+      margin-right: 1rem;
     }
     .deal-card { 
       background: white; 
@@ -483,149 +501,171 @@
   </div>
   
   <div class="container">
-    <!-- FEATURED DEAL - BORRELCHALLENGE -->
-    <div class="featured-deal">
-      <div class="deal-badge">DEAL VAN DE DAG: 50%</div>
-      <div class="featured-content">
-        <h2>🍻 BorrelChallenge - Durven jullie het aan?</h2>
-        <p>Een interactieve kroegentocht door 5 zorgvuldig geselecteerde bars. Met uitdagende opdrachten en veel plezier. Ideaal voor vrijgezellenfeesten, teamuitjes en verjaardagen.</p>
-        
-         <div class="toggle-buttons">
- 	  <button class="toggle-btn" onclick="toggleContent(this, 'moreInfo')">
-   	   <span>Meer Info</span>
-   	   <span class="toggle-icon">▼</span>
-	  </button>
-	  <button class="toggle-btn" onclick="toggleContent(this, 'reviews')">
-  	   <span>Reviews</span>
-  	   <span class="toggle-icon">▼</span>
-  	 </button>
-	</div>
-        
-        <div id="moreInfo" class="toggle-content">
-          <div class="more-info-content">
-            <h3>🎯 Wat maakt onze BorrelChallenge uniek?</h3>
-            
-            <div class="info-section">
-              <h4>📱 Hoe werkt het?</h4>
-              <p>Na aankoop ontvang je direct toegang tot onze app. Kies je startlocatie en begin aan een avontuur vol uitdagingen, foto-opdrachten en mini-games. Elk team krijgt punten voor voltooide opdrachten.</p>
-            </div>
-            
-            <div class="info-section">
-              <h4>🏆 Opdrachten & Uitdagingen</h4>
-              <ul>
-                <li>Foto-opdrachten met locals en barmedewerkers</li>
-                <li>Trivia vragen over de stad en geschiedenis</li>
-                <li>Creatieve team-challenges</li>
-                <li>Geheime bonus opdrachten in elke bar</li>
-                <li>Finale uitdaging voor extra punten</li>
-              </ul>
-            </div>
-            
-            <div class="info-section">
-              <h4>🍻 Locaties & Duur</h4>
-              <p>Beschikbaar in Amsterdam, Utrecht, Den Haag, Rotterdam en Eindhoven. Gemiddelde duur: 3-4 uur. Alle bars zijn op loopafstand van elkaar en zorgvuldig geselecteerd op sfeer en kwaliteit.</p>
-            </div>
-            
-            <div class="info-section">
-              <h4>🎁 Inbegrepen</h4>
-              <ul>
-                <li>Toegang tot de BorrelChallenge app</li>
-                <li>Interactieve kaart met 5 top-locaties</li>
-                <li>15+ unieke opdrachten per locatie</li>
-                <li>Welkomstdrankje in de eerste bar</li>
-                <li>Digitaal winnaarscertificaat</li>
-                <li>24/7 support tijdens je uitje</li>
-              </ul>
-            </div>
-          </div>
-        </div>
-        
-        <div id="reviews" class="toggle-content">
-          <div class="reviews-content">
-            <h3>⭐ Wat zeggen anderen?</h3>
-            
-            <div class="review">
-              <div class="review-header">
-                <span class="reviewer-name">Lisa & Teamgenoten</span>
-                <span class="review-rating">⭐⭐⭐⭐⭐</span>
-              </div>
-              <div class="review-text">
-                "Fantastische teambuilding activiteit! De opdrachten waren hilarisch en we hebben echt onverwachte plekjes ontdekt. Perfecte mix van competitie en gezelligheid."
-              </div>
-              <div class="review-date">2 weken geleden - Amsterdam</div>
-            </div>
-            
-            <div class="review">
-              <div class="review-header">
-                <span class="reviewer-name">Mark V.</span>
-                <span class="review-rating">⭐⭐⭐⭐⭐</span>
-              </div>
-              <div class="review-text">
-                "Georganiseerd voor mijn vrijgezellenfeest. Alle 8 vrienden waren super enthousiast. De app werkte perfect en de bars waren top keuzes. Zeker een aanrader!"
-              </div>
-              <div class="review-date">1 maand geleden - Utrecht</div>
-            </div>
-            
-            <div class="review">
-              <div class="review-header">
-                <span class="reviewer-name">Sarah & Collega's</span>
-                <span class="review-rating">⭐⭐⭐⭐⭐</span>
-              </div>
-              <div class="review-text">
-                "Bedrijfsuitje met een twist! Onze collega's zijn normaal best gereserveerd, maar dit brak echt het ijs. Geweldige sfeer en veel gelachen."
-              </div>
-              <div class="review-date">3 weken geleden - Rotterdam</div>
-            </div>
-            
-            <div class="review">
-              <div class="review-header">
-                <span class="reviewer-name">Tom & Friends</span>
-                <span class="review-rating">⭐⭐⭐⭐⭐</span>
-              </div>
-              <div class="review-text">
-                "Perfecte verjaardagsactiviteit! De mix van bars was geweldig en de opdrachten zorgden voor veel entertainment. Goede prijs-kwaliteit verhouding."
-              </div>
-              <div class="review-date">1 week geleden - Den Haag</div>
-            </div>
-          </div>
-        </div>
-        
-        <div class="image-gallery">
-          <img src="https://images.pexels.com/photos/32333373/pexels-photo-32333373/free-photo-of-vrolijk-verjaardagsfeest-met-vrienden-binnen.jpeg?auto=compress&cs=tinysrgb&w=600" alt="Vrienden die samen plezier hebben tijdens de BorrelChallenge" class="gallery-img">
-          <img src="https://images.pexels.com/photos/1269025/pexels-photo-1269025.jpeg?auto=compress&cs=tinysrgb&w=600" alt="Gezellige bar sfeer tijdens de BorrelChallenge" class="gallery-img">
-          <img src="https://images.pexels.com/photos/6224699/pexels-photo-6224699.jpeg?auto=compress&cs=tinysrgb&w=600" alt="Groep vrienden die samen borrelen" class="gallery-img">
-        </div>
-        
-        <div class="features">
-          <div class="feature">
-            <div class="feature-icon">👥</div>
-            <div>4-8 personen</div>
-          </div>
-          <div class="feature">
-            <div class="feature-icon">📱</div>
-            <div>Zonder gids</div>
-          </div>
-          <div class="feature">
-            <div class="feature-icon">🎯</div>
-            <div>Opdrachten & Punten</div>
-          </div>
-          <div class="feature">
-            <div class="feature-icon">🚶</div>
-            <div>Eigen tempo</div>
-          </div>
-        </div>
-        
-        <div class="price-box">
-          <span class="old-price">€59,99</span>
-          <span class="new-price">€29,99</span>
-          <span class="savings">50% KORTING</span>
-          <div class="validity">Nog één dag geldig</div>
-        </div>
-        
-        <a href="https://buy.stripe.com/cN2dUjfgo9vK7kI9AC?prefilled_promo_code=MEGADEALS" class="cta-button">Reserveer Nu</a>
-        <p style="margin-top: 1rem; font-size: 0.9em; opacity: 0.9; text-align: center;">Code: <strong>MEGADEALS</strong> | Direct speelbaar | Geld terug Garantie</p>
+  <!-- FEATURED DEAL - BORRELCHALLENGE -->
+  <div class="featured-deal">
+    <div class="deal-badge">DEAL VAN DE DAG: 50%</div>
+    <div class="featured-content">
+
+      <h2>🍻 BorrelChallenge - Durven jullie het aan?</h2>
+
+      <!-- DIRECT: prijs, geldigheid, knop en actiecode -->
+      <div class="price-box" style="margin-top: 1rem;">
+        <span class="old-price">€59,99</span>
+        <span class="new-price">€29,99</span>
+        <span class="savings">50% KORTING</span>
+        <div class="validity">Nog één dag geldig</div>
       </div>
+
+      <p style="margin-top: 0.5rem; font-size: 0.9em; opacity: 0.9; text-align: center;">
+        Code: <strong>MEGADEALS</strong> | Direct speelbaar | Geld terug Garantie
+      </p>
+
+      <!-- Visuele ondersteuning -->
+      <div class="image-gallery" style="margin-top: 1.5rem;">
+        <img src="https://images.pexels.com/photos/32333373/pexels-photo-32333373/free-photo-of-vrolijk-verjaardagsfeest-met-vrienden-binnen.jpeg?auto=compress&cs=tinysrgb&w=600"
+             alt="Vrienden die samen plezier hebben tijdens de BorrelChallenge" class="gallery-img">
+      </div>
+<a href="https://buy.stripe.com/cN2dUjfgo9vK7kI9AC?prefilled_promo_code=MEGADEALS" class="cta-button">
+  Claim nu voor €29,99
+</a>
+
+      <!-- Introtekst -->
+      <p style="margin-top: 1.5rem;">
+        Een interactieve kroegentocht door 5 zorgvuldig geselecteerde bars. Met uitdagende opdrachten en veel plezier. Ideaal voor vrijgezellenfeesten, teamuitjes en verjaardagen.
+      </p>
+
+      <!-- TOGGLE KNOPPEN -->
+      <div class="toggle-buttons">
+        <button class="toggle-btn" onclick="toggleContent(this, 'moreInfo')">
+          <span>Meer Info</span>
+          <span class="toggle-icon">▼</span>
+        </button>
+        <button class="toggle-btn" onclick="toggleContent(this, 'reviews')">
+          <span>Reviews</span>
+          <span class="toggle-icon">▼</span>
+        </button>
+      </div>
+
+      <!-- TOGGLE INHOUD - MEER INFO -->
+      <div id="moreInfo" class="toggle-content">
+        <div class="more-info-content">
+          <h3>🎯 Wat maakt onze BorrelChallenge uniek?</h3>
+
+          <div class="info-section">
+            <h4>📱 Hoe werkt het?</h4>
+            <p>Na aankoop ontvang je direct toegang tot onze app. Kies je startlocatie en begin aan een avontuur vol uitdagingen, foto-opdrachten en mini-games. Elk team krijgt punten voor voltooide opdrachten.</p>
+          </div>
+
+          <div class="info-section">
+            <h4>🏆 Opdrachten & Uitdagingen</h4>
+            <ul>
+              <li>Foto-opdrachten met locals en barmedewerkers</li>
+              <li>Trivia vragen over de stad en geschiedenis</li>
+              <li>Creatieve team-challenges</li>
+              <li>Geheime bonus opdrachten in elke bar</li>
+              <li>Finale uitdaging voor extra punten</li>
+            </ul>
+          </div>
+
+          <div class="info-section">
+            <h4>🍻 Locaties & Duur</h4>
+            <p>Beschikbaar in Amsterdam, Utrecht, Den Haag, Rotterdam en Eindhoven. Gemiddelde duur: 3-4 uur. Alle bars zijn op loopafstand van elkaar en zorgvuldig geselecteerd op sfeer en kwaliteit.</p>
+          </div>
+
+          <div class="info-section">
+            <h4>🎁 Inbegrepen</h4>
+            <ul>
+              <li>Toegang tot de BorrelChallenge app</li>
+              <li>Interactieve kaart met 5 top-locaties</li>
+              <li>15+ unieke opdrachten per locatie</li>
+              <li>Welkomstdrankje in de eerste bar</li>
+              <li>Digitaal winnaarscertificaat</li>
+              <li>24/7 support tijdens je uitje</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+
+      <!-- TOGGLE INHOUD - REVIEWS -->
+      <div id="reviews" class="toggle-content">
+        <div class="reviews-content">
+          <h3>⭐ Wat zeggen anderen?</h3>
+
+          <div class="review">
+            <div class="review-header">
+              <span class="reviewer-name">Lisa & Teamgenoten</span>
+              <span class="review-rating">⭐⭐⭐⭐⭐</span>
+            </div>
+            <div class="review-text">
+              "Fantastische teambuilding activiteit! De opdrachten waren hilarisch en we hebben echt onverwachte plekjes ontdekt. Perfecte mix van competitie en gezelligheid."
+            </div>
+            <div class="review-date">2 weken geleden - Amsterdam</div>
+          </div>
+
+          <div class="review">
+            <div class="review-header">
+              <span class="reviewer-name">Mark V.</span>
+              <span class="review-rating">⭐⭐⭐⭐⭐</span>
+            </div>
+            <div class="review-text">
+              "Georganiseerd voor mijn vrijgezellenfeest. Alle 8 vrienden waren super enthousiast. De app werkte perfect en de bars waren top keuzes. Zeker een aanrader!"
+            </div>
+            <div class="review-date">1 maand geleden - Utrecht</div>
+          </div>
+
+          <div class="review">
+            <div class="review-header">
+              <span class="reviewer-name">Sarah & Collega's</span>
+              <span class="review-rating">⭐⭐⭐⭐⭐</span>
+            </div>
+            <div class="review-text">
+              "Bedrijfsuitje met een twist! Onze collega's zijn normaal best gereserveerd, maar dit brak echt het ijs. Geweldige sfeer en veel gelachen."
+            </div>
+            <div class="review-date">3 weken geleden - Rotterdam</div>
+          </div>
+
+          <div class="review">
+            <div class="review-header">
+              <span class="reviewer-name">Tom & Friends</span>
+              <span class="review-rating">⭐⭐⭐⭐⭐</span>
+            </div>
+            <div class="review-text">
+              "Perfecte verjaardagsactiviteit! De mix van bars was geweldig en de opdrachten zorgden voor veel entertainment. Goede prijs-kwaliteit verhouding."
+            </div>
+            <div class="review-date">1 week geleden - Den Haag</div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Gallery en features onder de vouw -->
+      <div class="image-gallery">
+        <img src="https://images.pexels.com/photos/1269025/pexels-photo-1269025.jpeg?auto=compress&cs=tinysrgb&w=600" alt="Gezellige bar sfeer" class="gallery-img">
+        <img src="https://images.pexels.com/photos/6224699/pexels-photo-6224699.jpeg?auto=compress&cs=tinysrgb&w=600" alt="Groep vrienden die samen borrelen" class="gallery-img">
+      </div>
+
+      <div class="features">
+        <div class="feature">
+          <div class="feature-icon">👥</div>
+          <div>4-8 personen</div>
+        </div>
+        <div class="feature">
+          <div class="feature-icon">📱</div>
+          <div>Zonder gids</div>
+        </div>
+        <div class="feature">
+          <div class="feature-icon">🎯</div>
+          <div>Opdrachten & Punten</div>
+        </div>
+        <div class="feature">
+          <div class="feature-icon">🚶</div>
+          <div>Eigen tempo</div>
+        </div>
+      </div>
+
     </div>
+  </div>
+</div>
+
     
     <!-- OTHER DEALS -->
    <div class="deals-grid">
@@ -739,6 +779,16 @@
       button.classList.add('active');
     }
   }
+  window.addEventListener("scroll", function () {
+    const cta = document.querySelector(".cta-button");
+    if (!cta) return;
+
+    if (window.scrollY > 1300) {
+      cta.classList.add("hidden");
+    } else {
+      cta.classList.remove("hidden");
+    }
+  });
 </script>
 
 </body>
