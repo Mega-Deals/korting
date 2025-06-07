@@ -1,6 +1,31 @@
 <!DOCTYPE html>
 <html lang="nl">
 <head>
+<!-- Google tag (gtag.js) -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=AW-11040662541"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'AW-11040662541');
+</script>
+<!-- Event snippet for Klikken op boek nu knop conversion page
+In your html page, add the snippet and call gtag_report_conversion when someone clicks on the chosen link or button. -->
+<script>
+function gtag_report_conversion(url) {
+  var callback = function () {
+    if (typeof(url) != 'undefined') {
+      window.location = url;
+    }
+  };
+  gtag('event', 'conversion', {
+      'send_to': 'AW-11040662541/0_EiCNKertUaEI3IzJAp',
+      'event_callback': callback
+  });
+  return false;
+}
+</script>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
   <meta name="description" content="Voordelige deals voor groepsactiviteiten! BorrelChallenge met 50% korting - Teambuilding, uitjes en meer." />
@@ -554,9 +579,10 @@
         <img src="https://mega-deals.github.io/korting/cddc1ceb5c447051173bba233504bbbb%20(1).jpg" alt="Gezellige bar sfeer" class="gallery-img">
         <img src="https://mega-deals.github.io/korting/0433690aa014dcac499db1e306c3868f%20(1).jpg" alt="Groep vrienden die samen borrelen" class="gallery-img">
       </div>
-     <a href="https://buy.stripe.com/bJeeVccKK4HWdt8gsS2B204" class="cta-button">
-  Boek nu!
-</a>
+  	<a href="https://buy.stripe.com/bJeeVccKK4HWdt8gsS2B204" class="cta-button"
+     onclick="return gtag_report_conversion('https://buy.stripe.com/bJeeVccKK4HWdt8gsS2B204');">
+    Boek nu!
+  </a>
 
       <!-- Introtekst -->
       <p style="margin-top: 1.5rem;">
