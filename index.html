@@ -10,6 +10,23 @@
 
   gtag('config', 'AW-11040662541');
 </script>
+<!-- Event snippet for Klikken op boek nu knop conversion page
+In your html page, add the snippet and call gtag_report_conversion when someone clicks on the chosen link or button. -->
+<script>
+function gtag_report_conversion(url) {
+  var callback = function () {
+    if (typeof(url) != 'undefined') {
+      window.location = url;
+    }
+  };
+  gtag('event', 'conversion', {
+      'send_to': 'AW-11040662541/0_EiCNKertUaEI3IzJAp',
+      'event_callback': callback
+  });
+  return false;
+}
+</script>
+
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
   <meta name="description" content="Voordelige deals voor groepsactiviteiten! BorrelChallenge met 50% korting - Teambuilding, uitjes en meer." />
@@ -533,9 +550,12 @@
         <img src="https://static.wixstatic.com/media/04b083_cdbe21568cdb447285848c961b449a32~mv2.jpg/v1/fill/w_647,h_490,al_c,q_80,usm_0.66_1.00_0.01,enc_avif,quality_auto/Asset%201collage.jpg"
              alt="Vrienden die samen plezier hebben tijdens de BorrelChallenge" class="gallery-img">
       </div>
-<a href="https://buy.stripe.com/cN2dUjfgo9vK7kI9AC?prefilled_promo_code=MEGADEALS" class="cta-button">
+<a href="https://buy.stripe.com/cN2dUjfgo9vK7kI9AC?prefilled_promo_code=MEGADEALS"
+   class="cta-button"
+   onclick="return gtag_report_conversion(this.href);">
   Boek nu!
 </a>
+
 
       <!-- Introtekst -->
       <p style="margin-top: 1.5rem;">
