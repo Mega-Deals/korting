@@ -1,0 +1,1295 @@
+
+<!DOCTYPE html>
+<html lang="nl-NL">
+  <head>
+    <meta charset="UTF-8">
+<script type="text/javascript" data-cookieconsent="ignore">
+/* <![CDATA[ */
+var gform;gform||(document.addEventListener("gform_main_scripts_loaded",function(){gform.scriptsLoaded=!0}),document.addEventListener("gform/theme/scripts_loaded",function(){gform.themeScriptsLoaded=!0}),window.addEventListener("DOMContentLoaded",function(){gform.domLoaded=!0}),gform={domLoaded:!1,scriptsLoaded:!1,themeScriptsLoaded:!1,isFormEditor:()=>"function"==typeof InitializeEditor,callIfLoaded:function(o){return!(!gform.domLoaded||!gform.scriptsLoaded||!gform.themeScriptsLoaded&&!gform.isFormEditor()||(gform.isFormEditor()&&console.warn("The use of gform.initializeOnLoaded() is deprecated in the form editor context and will be removed in Gravity Forms 3.1."),o(),0))},initializeOnLoaded:function(o){gform.callIfLoaded(o)||(document.addEventListener("gform_main_scripts_loaded",()=>{gform.scriptsLoaded=!0,gform.callIfLoaded(o)}),document.addEventListener("gform/theme/scripts_loaded",()=>{gform.themeScriptsLoaded=!0,gform.callIfLoaded(o)}),window.addEventListener("DOMContentLoaded",()=>{gform.domLoaded=!0,gform.callIfLoaded(o)}))},hooks:{action:{},filter:{}},addAction:function(o,r,e,t){gform.addHook("action",o,r,e,t)},addFilter:function(o,r,e,t){gform.addHook("filter",o,r,e,t)},doAction:function(o){gform.doHook("action",o,arguments)},applyFilters:function(o){return gform.doHook("filter",o,arguments)},removeAction:function(o,r){gform.removeHook("action",o,r)},removeFilter:function(o,r,e){gform.removeHook("filter",o,r,e)},addHook:function(o,r,e,t,n){null==gform.hooks[o][r]&&(gform.hooks[o][r]=[]);var d=gform.hooks[o][r];null==n&&(n=r+"_"+d.length),gform.hooks[o][r].push({tag:n,callable:e,priority:t=null==t?10:t})},doHook:function(r,o,e){var t;if(e=Array.prototype.slice.call(e,1),null!=gform.hooks[r][o]&&((o=gform.hooks[r][o]).sort(function(o,r){return o.priority-r.priority}),o.forEach(function(o){"function"!=typeof(t=o.callable)&&(t=window[t]),"action"==r?t.apply(null,e):e[0]=t.apply(null,e)})),"filter"==r)return e[0]},removeHook:function(o,r,t,n){var e;null!=gform.hooks[o][r]&&(e=(e=gform.hooks[o][r]).filter(function(o,r,e){return!!(null!=n&&n!=o.tag||null!=t&&t!=o.priority)}),gform.hooks[o][r]=e)}});
+/* ]]> */
+</script>
+
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <link rel="preconnect" href="https://d2ftqzf4nsbvwq.cloudfront.net" crossorigin="anonymous"  />
+    <link rel="dns-prefetch" href="//d2ftqzf4nsbvwq.cloudfront.net"  />
+    <link rel="preconnect" href="https://www.verkade-keukens.nl" />
+    <style>html,body,div,span,applet,object,iframe,h1,h2,h3,h4,h5,h6,p,blockquote,pre,a,abbr,acronym,address,big,cite,code,del,dfn,em,img,ins,kbd,q,s,samp,small,strike,strong,sub,sup,tt,var,b,u,i,center,dl,dt,dd,ol,ul,li,fieldset,form,label,legend,table,caption,tbody,tfoot,thead,tr,th,td,article,aside,canvas,details,embed,figure,figcaption,footer,header,hgroup,menu,nav,output,ruby,section,summary,time,mark,audio,video{margin:0;padding:0;border:0;font-size:100%;vertical-align:baseline;}html,body{-webkit-font-smoothing:antialiased;-moz-osx-font-smoothing:grayscale;-webkit-text-size-adjust:100%;line-height:1;margin:0px !important;}body{max-width:100%;overflow-x:hidden;}article,aside,details,figcaption,figure,footer,header,hgroup,menu,nav,section{display:block;}ins{text-decoration:none;}p{-webkit-margin-before:0px;-webkit-margin-after:0px;-webkit-margin-start:0px;-webkit-margin-end:0px;}.body{position:relative;overflow:hidden;}ol,ul{list-style:none;}blockquote,q{quotes:none;}blockquote:before,blockquote:after,q:before,q:after{content:'';content:none;}table{border-collapse:collapse;border-spacing:0;}div,input,textarea,button,a{box-sizing:border-box;}strong,b,.strong,.bold{font-weight:700;}button,input{outline:none !important;}button{cursor:pointer;border:none;}a{text-decoration:none;color:inherit;}select{-webkit-appearance:none;-moz-appearance:none;text-indent:1px;text-overflow:'';}select::-ms-expand,input::-ms-clear{display:none;}textarea{overflow:auto;}.clear{clear:both;}img,video{max-width:100%;display:block;}img{height:auto;}select option{color:#000;background:#fff;}em{font-style:italic !important;}.loader-div{position:fixed;top:0;left:0;width:100%;height:100%;z-index:1000000000;box-sizing:border-box;display:none;}.loader-div img{height:auto !important;}.loader-bg{width:100%;height:100%;position:fixed;top:0;left:0;background:#fff;}body.loading-inline .loader-bg,body.loading-inline-self .loader-bg{background:rgba(255,255,255,0.5);}.loader-div .loader{position:absolute;top:50%;left:50%;border-radius:100%;border:2px solid #000;border-left-color:transparent !important;height:36px;width:36px;margin-left:-18px;margin-top:-18px;background:0 0 !important;box-sizing:border-box;}body.loader-page.loading .loader-div .loader,body.loading-inline .loader-div .loader,body.loading-inline-self .loader-div .loader{animation:rotateloader 500ms 0s linear infinite;}body.loader-page.loading .loader-div,body.loader-page.loading-inline .loader-div,body.loading-inline-self .loader-div{display:block !important;}body.loader-page.loading .body,body.loader-page.loading-inline .body,body.loading-inline-self .body{overflow:hidden !important;}@keyframes rotateloader{0%{transform:rotate(0)}50%{transform:rotate(180deg)}100%{transform:rotate(360deg)}}.loader-align-left{left:1rem;}.loader-align-center{left:50%;}.loader-align-right{left:auto !important;right:1rem;}.loader-valign-top{top:1rem;}.loader-valign-center{top:50%;}.loader-valign-bottom{top:auto !important;bottom:1rem;}.loader-align-center.loader-valign-top,.loader-align-center.loader-valign-bottom{transform:translate(-50%,0);}.loader-align-center.loader-valign-center{transform:translate(-50%,-50%);}.loader-variant-1{position:fixed;}.loader-variant-1-in{border-radius:100%;border:2px solid #000;height:36px;width:36px;background:0 0 !important;box-sizing:border-box;}body.loading .loader-variant-1-in,body.loading-inline .loader-variant-1-in,body.loading-inline-self .loader-variant-1-in{animation:rotateloader 500ms 0s linear infinite;}.loader-variant-2{position:fixed;width:80px;height:80px;}.loader-variant-2-in div{display:block;position:absolute;width:64px;height:64px;margin:8px;border:8px solid #fff;border-radius:50%;border-color:#fff transparent transparent transparent;}body.loading .loader-variant-2-in div,body.loading-inline .loader-variant-2-in div,body.loading-inline-self .loader-variant-2-in div{animation:loaderVariant2 1.2s cubic-bezier(0.5,0,0.5,1) infinite;}.loader-variant-2-in div:nth-child(1){animation-delay:-0.45s;}.loader-variant-2-in div:nth-child(2){animation-delay:-0.3s;}.loader-variant-2-in div:nth-child(3){animation-delay:-0.15s;}@keyframes loaderVariant2{0%{transform:rotate(0deg);}100%{transform:rotate(360deg);}}.loader-variant-3{position:fixed;width:100px;height:auto;box-sizing:border-box;}.loader-variant-3 .loader-variant-3-in.loader-animation{opacity:0;transform:scale(1);}body.loading .loader-variant-3-in.loader-animation,body.loading-inline .loader-variant-3-in.loader-animation,body.loading-inline-self .loader-variant-3-in.loader-animation{animation:loaderVariant3 3000ms linear infinite;}@keyframes loaderVariant3{0%{opacity:1;transform:scale(1);}50%{opacity:0;transform:scale(0.75);}100%{opacity:1;transform:scale(1);}}@-ms-keyframes loaderVariant3{0%{opacity:1;transform:scale(1);}50%{opacity:0;transform:scale(0.75);}100%{opacity:1;transform:scale(1);}}@-webkit-keyframes loaderVariant3{0%{opacity:1;transform:scale(1);}50%{opacity:0;transform:scale(0.75);}100%{opacity:1;transform:scale(1);}}.cookie-notice{display:none;position:fixed;bottom:0;z-index:10000000000;border-top:1px solid #E9E9E9;width:100%;overflow-y:scroll;-webkit-overflow-scrolling:touch;max-height:50%;box-shadow:0 -1px 10px 0 rgba(0,0,0,.15);}.cookie-notice.cookie-notice-popup{max-height:100%;max-width:100%;overflow:hidden !important;box-shadow:none;background:rgba(0,0,0,0.3);left:0px;top:0px;border-top:0px;}.cookie-notice.cookie-notice-popup .cookie-notice-in{position:fixed;left:50%;top:50%;max-width:1031px !important;max-height:100%;overflow-y:auto;-webkit-overflow-scrolling:touch;transform:translate(-50%,-50%);width:100%;}.cookie-notice-bottom .form-check{display:inline-block;vertical-align:middle;margin-right:1rem;}.cookie-notice-bottom .column{vertical-align:middle;}.cookie-notice-bottom .button-in{margin-left:0px !important;margin-top:0.7rem !important;}@media screen and (max-width:768px){.cookie-notice.cookie-notice-popup .cookie-notice-in{left:5%;width:90%;transform:translate(0px,-50%);max-height:80%;}.cookie-notice-bottom .button{display:block;margin-left:0px !important;margin-right:0px !important;}}.loader-bg{background:#ffffff;}body.loading-inline .loader-bg,body.loading-inline-self .loader-bg{background:#ffffff;opacity:0.9;}.loader-id-0{width:40px;}.loader-id-0 .loader-variant-3-in{-webkit-animation-duration:800ms !important;-ms-animation-duration:800ms !important;animation-duration:800ms !important;}.loader-id-0 img{width:40px;}.loader-id-1 .loader-variant-1-in{width:50px;height:50px;border-width:2px;border-top-color:#181818 !important;border-left-color:#181818 !important;border-bottom-color:#181818 !important;border-right-color:transparent !important;-webkit-animation-duration:900ms !important;-ms-animation-duration:900ms !important;animation-duration:900ms !important;}    </style>
+    <link data-minify="1" rel="stylesheet" type="text/css" href="https://d2ftqzf4nsbvwq.cloudfront.net/wp-content/cache/www.verkade-keukens.nl/min/1/wp-content/themes/bz-waas/assets/stylesheets/common/base.css?ver=1751959189" />
+    <link rel="preload" as="font" type="font/woff2" href="https://d2ftqzf4nsbvwq.cloudfront.net/wp-content/themes/bz-waas/assets/fonts/roboto/roboto-300.woff2" crossorigin="anonymous">
+    <link rel="preload" as="font" type="font/woff2" href="https://d2ftqzf4nsbvwq.cloudfront.net/wp-content/themes/bz-waas/assets/fonts/roboto/roboto-400.woff2" crossorigin="anonymous">
+    <link rel="preload" as="font" type="font/woff2" href="https://d2ftqzf4nsbvwq.cloudfront.net/wp-content/themes/bz-waas/assets/fonts/roboto/roboto-500.woff2" crossorigin="anonymous">
+    <link rel="preload" as="font" type="font/woff2" href="https://d2ftqzf4nsbvwq.cloudfront.net/wp-content/themes/bz-waas/assets/fonts/roboto/roboto-700.woff2" crossorigin="anonymous">
+    <link rel="preload" as="font" type="font/woff2" href="https://d2ftqzf4nsbvwq.cloudfront.net/wp-content/themes/bz-waas/assets/fonts/poppins/poppins-300.woff2" crossorigin="anonymous">
+    <link rel="preload" as="font" type="font/woff2" href="https://d2ftqzf4nsbvwq.cloudfront.net/wp-content/themes/bz-waas/assets/fonts/poppins/poppins-400.woff2" crossorigin="anonymous">
+    <link rel="preload" as="font" type="font/woff2" href="https://d2ftqzf4nsbvwq.cloudfront.net/wp-content/themes/bz-waas/assets/fonts/poppins/poppins-500.woff2" crossorigin="anonymous">
+    <link rel="preload" as="font" type="font/woff2" href="https://d2ftqzf4nsbvwq.cloudfront.net/wp-content/themes/bz-waas/assets/fonts/poppins/poppins-700.woff2" crossorigin="anonymous">
+    <link data-minify="1" rel="stylesheet" type="text/css" href="https://d2ftqzf4nsbvwq.cloudfront.net/wp-content/cache/www.verkade-keukens.nl/min/1/wp-content/uploads/www.verkade-keukens.nl/assets/stylesheets/fonts.css?ver=1751959189" nowprocket />
+    <link data-minify="1" rel="stylesheet" type="text/css" href="https://d2ftqzf4nsbvwq.cloudfront.net/wp-content/cache/www.verkade-keukens.nl/min/1/wp-content/themes/bz-waas/assets/stylesheets/common/style.css?ver=1751959190" />
+    <link data-minify="1" rel="stylesheet" type="text/css" href="https://d2ftqzf4nsbvwq.cloudfront.net/wp-content/cache/www.verkade-keukens.nl/min/1/wp-content/themes/bz-waas/assets/stylesheets/common/responsive.css?ver=1751959190" />
+    <link data-minify="1" rel="stylesheet" type="text/css" href="https://d2ftqzf4nsbvwq.cloudfront.net/wp-content/cache/www.verkade-keukens.nl/min/1/wp-content/uploads/www.verkade-keukens.nl/assets/stylesheets/theme.css?ver=1751959190" />
+        <script nowprocket data-cookieconsent="ignore">
+      //<![CDATA[
+      function checkEsCookie(e) {
+        var o = getEsCookie("es_cookie_preferences"), i = !1;
+        if ("" != o) {
+          var t = JSON.parse(o);
+          void 0 !== t && void 0 !== t[e] && (i = t[e])
+        }
+        return i
+      }
+      function getEsCookie(e) {
+        for (var o = e + "=", i = decodeURIComponent(document.cookie).split(";"), t = [], n = 0; n < i.length; n++)0 == i[n].trim().indexOf(o) && (t = i[n].trim().split("="));
+        return t.length > 0 ? t[1] : ""
+      }
+
+      function setEsCookie(cname, cvalue, exdays) {
+        var d = new Date();
+        d.setTime(d.getTime() + (exdays * 24 * 60 * 60 * 1000));
+        var expires = "expires=" + d.toUTCString();
+        document.cookie = cname + "=" + cvalue + ";" + expires + ";path=/";
+      }
+      //]]>
+    </script>
+
+
+                <script async src="https://www.googletagmanager.com/gtag/js?id=UA-129012547-1" nowprocket></script>
+            <script nowprocket>
+                window.dataLayer = window.dataLayer || [];function gtag() {dataLayer.push(arguments);}gtag('js', new Date());gtag('config', 'UA-129012547-1', {'anonymize_ip':true});            </script>
+                        <script nowprocket>(function (w, d, s, l, i) {w[l] = w[l] || [];w[l].push({'gtm.start': new Date().getTime(), event: 'gtm.js'});var f = d.getElementsByTagName(s)[0],j = d.createElement(s), dl = l != 'dataLayer' ? '&l=' + l : '';j.async = true;j.src ='https://www.googletagmanager.com/gtm.js?id=' + i + dl;f.parentNode.insertBefore(j, f);})(window, document, 'script', 'dataLayer', 'GTM-T2P9GGB');</script>
+                        <meta name="google-site-verification" content="QWmWN_iJpU9opi61-Cz9J5fm1KLbGYW7pGe9ZAUKhgA"/>
+                                <script nowprocket>
+                    if(getEsCookie('es_cookie_preferences_statistics') === 'true'){                    !function(e,n,t,o,c,s,a){e.fbq||(c=e.fbq=function(){c.callMethod?c.callMethod.apply(c,arguments):c.queue.push(arguments)},e._fbq||(e._fbq=c),c.push=c,c.loaded=!0,c.version="2.0",c.queue=[],(s=n.createElement(t)).async=!0,s.src="https://connect.facebook.net/en_US/fbevents.js",(a=n.getElementsByTagName(t)[0]).parentNode.insertBefore(s,a))}(window,document,"script");
+                    fbq('init', '1089116566311854');fbq('track', 'PageView');}else{function fbq(){};}                </script>
+                <noscript><img height="1" width="1" style="display:none"
+                               src="https://www.facebook.com/tr?id=1089116566311854&ev=PageView&noscript=1"
+                    /></noscript>
+                            <meta name="p:domain_verify" content="d5639e9b52d365b1c498c24972fdcb18" />
+                <script type="text/javascript" nowprocket data-cookieconsent="ignore">
+                var templateDirectoryUrl = "https://www.verkade-keukens.nl/wp-content/themes/bz-waas";
+
+
+    </script>
+    <meta name='robots' content='index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1' />
+
+	<!-- This site is optimized with the Yoast SEO plugin v25.1 - https://yoast.com/wordpress/plugins/seo/ -->
+	<title>Contact opnemen met Verkade Keukendesign in Kwintsheul</title>
+	<meta name="description" content="Op zoek naar een nieuwe keuken? Heeft u een storing aan een apparaat in uw keuken? Neem contact op met Verkade Keukendesign in Kwintsheul." />
+	<link rel="canonical" href="https://www.verkade-keukens.nl/contact/" />
+	<meta property="og:locale" content="nl_NL" />
+	<meta property="og:type" content="article" />
+	<meta property="og:title" content="Contact opnemen met Verkade Keukendesign in Kwintsheul" />
+	<meta property="og:description" content="Op zoek naar een nieuwe keuken? Heeft u een storing aan een apparaat in uw keuken? Neem contact op met Verkade Keukendesign in Kwintsheul." />
+	<meta property="og:url" content="https://www.verkade-keukens.nl/contact/" />
+	<meta property="og:site_name" content="Verkade Keukendesign" />
+	<meta property="article:modified_time" content="2025-05-06T12:37:54+00:00" />
+	<meta name="twitter:card" content="summary_large_image" />
+	<meta name="twitter:label1" content="Geschatte leestijd" />
+	<meta name="twitter:data1" content="2 minuten" />
+	<script type="application/ld+json" class="yoast-schema-graph">{"@context":"https://schema.org","@graph":[{"@type":"WebPage","@id":"https://www.verkade-keukens.nl/contact/","url":"https://www.verkade-keukens.nl/contact/","name":"Contact opnemen met Verkade Keukendesign in Kwintsheul","isPartOf":{"@id":"https://www.verkade-keukens.nl/#website"},"datePublished":"2021-03-09T10:25:29+00:00","dateModified":"2025-05-06T12:37:54+00:00","description":"Op zoek naar een nieuwe keuken? Heeft u een storing aan een apparaat in uw keuken? Neem contact op met Verkade Keukendesign in Kwintsheul.","breadcrumb":{"@id":"https://www.verkade-keukens.nl/contact/#breadcrumb"},"inLanguage":"nl-NL","potentialAction":[{"@type":"ReadAction","target":["https://www.verkade-keukens.nl/contact/"]}]},{"@type":"BreadcrumbList","@id":"https://www.verkade-keukens.nl/contact/#breadcrumb","itemListElement":[{"@type":"ListItem","position":1,"name":"Home","item":"https://www.verkade-keukens.nl/"},{"@type":"ListItem","position":2,"name":"Contact"}]},{"@type":"WebSite","@id":"https://www.verkade-keukens.nl/#website","url":"https://www.verkade-keukens.nl/","name":"Verkade Keukendesign","description":"Veelzijdig keukendesign in Kwintsheul","publisher":{"@id":"https://www.verkade-keukens.nl/#organization"},"potentialAction":[{"@type":"SearchAction","target":{"@type":"EntryPoint","urlTemplate":"https://www.verkade-keukens.nl/?s={search_term_string}"},"query-input":{"@type":"PropertyValueSpecification","valueRequired":true,"valueName":"search_term_string"}}],"inLanguage":"nl-NL"},{"@type":"Organization","@id":"https://www.verkade-keukens.nl/#organization","name":"Verkade Keukendesign","url":"https://www.verkade-keukens.nl/","logo":{"@type":"ImageObject","inLanguage":"nl-NL","@id":"https://www.verkade-keukens.nl/#/schema/logo/image/","url":"https://d2ftqzf4nsbvwq.cloudfront.net/wp-content/uploads/www.verkade-keukens.nl/2021/03/favicon.png","contentUrl":"https://d2ftqzf4nsbvwq.cloudfront.net/wp-content/uploads/www.verkade-keukens.nl/2021/03/favicon.png","width":128,"height":128,"caption":"Verkade Keukendesign"},"image":{"@id":"https://www.verkade-keukens.nl/#/schema/logo/image/"}}]}</script>
+	<!-- / Yoast SEO plugin. -->
+
+
+<script type="text/javascript" src="https://d2ftqzf4nsbvwq.cloudfront.net/wp-includes/js/jquery/jquery.min.js?ver=3.7.1" data-cookieconsent="ignore" ></script>
+<script type="text/javascript" src="https://d2ftqzf4nsbvwq.cloudfront.net/wp-includes/js/jquery/jquery-migrate.min.js?ver=3.4.1" data-cookieconsent="ignore" ></script>
+<script type="text/javascript" id="jquery-js-after" data-cookieconsent="ignore">
+/* <![CDATA[ */
+var $=jQuery;
+/* ]]> */
+</script>
+<link rel="https://api.w.org/" href="https://www.verkade-keukens.nl/wp-json/" /><link rel="alternate" title="JSON" type="application/json" href="https://www.verkade-keukens.nl/wp-json/wp/v2/pages/5890" /><link rel="apple-touch-icon" sizes="57x57" href="https://d2ftqzf4nsbvwq.cloudfront.net/wp-content/uploads/www.verkade-keukens.nl/2025/07/favicon-favicon-57x57.png">
+<link rel="apple-touch-icon-precomposed" sizes="57x57" href="https://d2ftqzf4nsbvwq.cloudfront.net/wp-content/uploads/www.verkade-keukens.nl/2025/07/favicon-favicon-57x57.png">
+<link rel="apple-touch-icon" sizes="60x60" href="https://d2ftqzf4nsbvwq.cloudfront.net/wp-content/uploads/www.verkade-keukens.nl/2025/07/favicon-favicon-60x60.png">
+<link rel="apple-touch-icon-precomposed" sizes="60x60" href="https://d2ftqzf4nsbvwq.cloudfront.net/wp-content/uploads/www.verkade-keukens.nl/2025/07/favicon-favicon-60x60.png">
+<link rel="apple-touch-icon" sizes="64x64" href="https://d2ftqzf4nsbvwq.cloudfront.net/wp-content/uploads/www.verkade-keukens.nl/2025/07/favicon-favicon-64x64.png">
+<link rel="apple-touch-icon-precomposed" sizes="64x64" href="https://d2ftqzf4nsbvwq.cloudfront.net/wp-content/uploads/www.verkade-keukens.nl/2025/07/favicon-favicon-64x64.png">
+<link rel="apple-touch-icon" sizes="72x72" href="https://d2ftqzf4nsbvwq.cloudfront.net/wp-content/uploads/www.verkade-keukens.nl/2025/07/favicon-favicon-72x72.png">
+<link rel="apple-touch-icon-precomposed" sizes="72x72" href="https://d2ftqzf4nsbvwq.cloudfront.net/wp-content/uploads/www.verkade-keukens.nl/2025/07/favicon-favicon-72x72.png">
+<link rel="apple-touch-icon" sizes="76x76" href="https://d2ftqzf4nsbvwq.cloudfront.net/wp-content/uploads/www.verkade-keukens.nl/2025/07/favicon-favicon-76x76.png">
+<link rel="apple-touch-icon-precomposed" sizes="76x76" href="https://d2ftqzf4nsbvwq.cloudfront.net/wp-content/uploads/www.verkade-keukens.nl/2025/07/favicon-favicon-76x76.png">
+<link rel="apple-touch-icon" sizes="114x114" href="https://d2ftqzf4nsbvwq.cloudfront.net/wp-content/uploads/www.verkade-keukens.nl/2025/07/favicon-favicon-114x114.png">
+<link rel="apple-touch-icon-precomposed" sizes="114x114" href="https://d2ftqzf4nsbvwq.cloudfront.net/wp-content/uploads/www.verkade-keukens.nl/2025/07/favicon-favicon-114x114.png">
+<link rel="apple-touch-icon" sizes="120x120" href="https://d2ftqzf4nsbvwq.cloudfront.net/wp-content/uploads/www.verkade-keukens.nl/2025/07/favicon-favicon-120x120.png">
+<link rel="apple-touch-icon-precomposed" sizes="120x120" href="https://d2ftqzf4nsbvwq.cloudfront.net/wp-content/uploads/www.verkade-keukens.nl/2025/07/favicon-favicon-120x120.png">
+<link rel="apple-touch-icon" sizes="144x144" href="https://d2ftqzf4nsbvwq.cloudfront.net/wp-content/uploads/www.verkade-keukens.nl/2025/07/favicon-favicon-144x144.png">
+<link rel="apple-touch-icon-precomposed" sizes="144x144" href="https://d2ftqzf4nsbvwq.cloudfront.net/wp-content/uploads/www.verkade-keukens.nl/2025/07/favicon-favicon-144x144.png">
+<link rel="apple-touch-icon" sizes="152x152" href="https://d2ftqzf4nsbvwq.cloudfront.net/wp-content/uploads/www.verkade-keukens.nl/2025/07/favicon-favicon-152x152.png">
+<link rel="apple-touch-icon-precomposed" sizes="152x152" href="https://d2ftqzf4nsbvwq.cloudfront.net/wp-content/uploads/www.verkade-keukens.nl/2025/07/favicon-favicon-152x152.png">
+<link rel="apple-touch-icon" sizes="180x180" href="https://d2ftqzf4nsbvwq.cloudfront.net/wp-content/uploads/www.verkade-keukens.nl/2025/07/favicon-favicon-180x180.png">
+<link rel="apple-touch-icon-precomposed" sizes="180x180" href="https://d2ftqzf4nsbvwq.cloudfront.net/wp-content/uploads/www.verkade-keukens.nl/2025/07/favicon-favicon-180x180.png">
+<link rel="apple-touch-icon" href="https://d2ftqzf4nsbvwq.cloudfront.net/wp-content/uploads/www.verkade-keukens.nl/2021/03/favicon.png">
+<link rel="apple-touch-icon-precomposed" href="https://d2ftqzf4nsbvwq.cloudfront.net/wp-content/uploads/www.verkade-keukens.nl/2021/03/favicon.png">
+<link rel="shortcut icon" href="https://d2ftqzf4nsbvwq.cloudfront.net/wp-content/uploads/www.verkade-keukens.nl/2021/03/favicon.png">
+<link rel="icon" href="https://d2ftqzf4nsbvwq.cloudfront.net/wp-content/uploads/www.verkade-keukens.nl/2021/03/favicon.png">
+<script data-minify="1" type="text/javascript"  src="https://d2ftqzf4nsbvwq.cloudfront.net/wp-content/cache/www.verkade-keukens.nl/min/1/wp-content/themes/bz-waas/assets/javascripts/custom-main.js?ver=1751959190" data-cookieconsent="ignore" data-rocket-defer defer></script><script data-minify="1" type="text/javascript"  src="https://d2ftqzf4nsbvwq.cloudfront.net/wp-content/cache/www.verkade-keukens.nl/min/1/wp-content/themes/bz-waas/assets/javascripts/parts/blocks/custom-header.js?ver=1751959190" data-cookieconsent="ignore" data-rocket-defer defer></script><script data-minify="1" type="text/javascript"  src="https://d2ftqzf4nsbvwq.cloudfront.net/wp-content/cache/www.verkade-keukens.nl/min/1/wp-content/themes/bz-waas/assets/javascripts/parts/functions/custom-form.js?ver=1751959190" data-cookieconsent="ignore" data-rocket-defer defer></script>    <meta name="generator" content="WP Rocket 3.18.3" data-wpr-features="wpr_defer_js wpr_minify_js wpr_minify_css wpr_cdn wpr_desktop" /></head>
+    <body class="loading loader-page ">
+    	            <noscript>
+                <iframe src="https://www.googletagmanager.com/ns.html?id=GTM-T2P9GGB" height="0" width="0" style="display:none;visibility:hidden"></iframe>
+            </noscript>
+
+                <div class="loader-div">
+    <div class="loader-bg"></div>
+                    <div class="loader-variant-3 loader-id-0 loader-align-center loader-valign-center">
+                    <div class="loader-variant-3-in loader-animation">
+                        <img src="https://d2ftqzf4nsbvwq.cloudfront.net/wp-content/uploads/www.verkade-keukens.nl/2021/03/favicon.png" width="128" height="128" alt="Favicon"/>
+                    </div>
+                </div>
+                                            <div class="loader-variant-1 loader-id-1 loader-align-center loader-valign-center">
+                    <div class="loader-variant-1-in"></div>
+                </div>
+                            </div>
+        	<div class="cookie-notice cookie-notice-popup" style="display: none">
+	    <div class="cookie-notice-in bg-white-1">
+	        <div class="container container-5">
+	            <div class="wrapper wrapper-1">
+	
+	                <div class="box-in">
+	                    	                        <div class="cookie-notice-top">
+	                            <div class="component mb-15"><div class="title title-1 fw-700 clr-black-1 text-left">Verkade Keukendesign maakt gebruik van cookies</div></div><div class="component mb-25"><div class="text text-1 fw-400 clr-grey-1 text-left"><p>We gebruiken cookies om content en advertenties te personaliseren, om functies voor social media te bieden en om ons websiteverkeer te analyseren. Ook delen we informatie over je gebruik van onze site met onze partners voor social media, adverteren en analyse. Deze partners kunnen deze gegevens combineren met andere informatie die je aan ze hebt verstrekt of die ze hebben verzameld op basis van je gebruik van hun services.</p>
+</div></div>	                        </div>
+	                        	                    <div class="cookie-notice-bottom">
+	                        <div class="columns">
+	                            <div class="column column-1">
+	                                <div class="form-check-in text-1 clr-grey-1 ">
+	                                    <label class="form-check ">
+	                                        <input type="checkbox" data-cookie-type="necessary" name="wpessentialscookie_cookie_necessary" checked="checked" disabled>
+	                                        <span class="form-checkmark"></span>
+	                                        <span class="value ">Noodzakelijk</span>
+	                                    </label>
+	
+	                                    <label class="form-check ">
+	                                        <input type="checkbox" data-cookie-type="statistics" name="wpessentialscookie_cookie_statistics" checked="checked">
+	                                        <span class="form-checkmark"></span>
+	                                        <span class="value ">Statistieken</span>
+	                                    </label>
+	
+	                                    <label class="form-check ">
+	                                        <input type="checkbox" data-cookie-type="marketing" name="wpessentialscookie_cookie_marketing" checked="checked">
+	                                        <span class="form-checkmark"></span>
+	                                        <span class="value ">Marketing</span>
+	                                    </label>
+	                                </div>
+	                            </div>
+	                            <div class="column column-2">
+	                                <div class="button-group button-group-right button-group-medium button">
+
+
+                                        <div class="component mb-0 "><a href="javascript:void(0)" class="button-new button-new-6742 cookie-consent-button hover-none">	
+			<div class="button-hover hover-none"></div>
+			<div class="button-new-in text-3 fw-500 clr-white-1 clr-hover-primary-2 text-center ">
+				
+				Ja, ik accepteer de cookies
+				
+			</div>
+		</a></div>
+	                                </div>
+	                            </div>
+	                        </div>
+	                    </div>
+	                </div>
+	            </div>
+	        </div>
+	
+	    </div>
+	</div>
+
+        
+   		<div class="body" >
+			
+	        <div class="content">
+            
+<header class="header-2154 header-transparent" data-toggle-width="1024">
+
+        <div class="header-rows">
+        
+                <div class="header-row toggle-hide  mobile-hide">
+                    <div class="header-row-in">
+                        <div class="container none pt-10 pb-10">
+                            <div class="wrapper wrapper-1">
+                                <div class="columns first-col-space last-col-space" data-columns="2">
+
+                                                                            <div class="column column-1 text-left">
+                                            <div class="column-in">
+                                                <div class="component-group  component-group-2 component-group-flexible">    <div class="component-header component-header-review-extern  ">
+
+        <div class="component mb-0">
+            <a href="https://www.5sterrenspecialist.nl/keurmerkhouders/verkade-keukens" target="_blank" class="review-extern review-extern-variant-2">
+                                    <div class="text-1 clr-white-1 fw-700">
+                        <div class="review-extern-in">
+                            <img class="mh-25" src="https://d2ftqzf4nsbvwq.cloudfront.net/wp-content/themes/bz-waas/assets/media/images/reviews/5-sterren-specialist-light.png" alt="5 Sterren Specialist Light" width="439" height="233" />
+                            <div class="reviews-extern-stars" data-size-font="1-em">
+                                <div class="reviews-extern-stars-bg clr-primary-3">
+                                    <svg class="waas-icon icon-star-circle-full " version="1.1" xmlns="http://www.w3.org/2000/svg"  viewBox="0 0 32 32">
+<path  fill="currentColor" d="M22.769 25.658l-1.812-7.761 6.017-5.197-7.863-0.684-3.077-7.214-3.145 7.282-7.863 0.615 5.983 5.197-1.778 7.761 6.803-4.137zM16.034 0.017q4.41 0 8.068 2.188 3.624 1.983 5.675 5.675 2.222 3.761 2.222 8.137t-2.222 8.103q-2.051 3.692-5.675 5.675-3.658 2.188-8.103 2.188t-8.103-2.188q-3.59-2.085-5.675-5.744-2.222-3.727-2.222-8 0-4.376 2.222-8.103 2.051-3.624 5.726-5.778t8.085-2.154z"></path>
+</svg>
+                                    <svg class="waas-icon icon-star-circle-full " version="1.1" xmlns="http://www.w3.org/2000/svg"  viewBox="0 0 32 32">
+<path  fill="currentColor" d="M22.769 25.658l-1.812-7.761 6.017-5.197-7.863-0.684-3.077-7.214-3.145 7.282-7.863 0.615 5.983 5.197-1.778 7.761 6.803-4.137zM16.034 0.017q4.41 0 8.068 2.188 3.624 1.983 5.675 5.675 2.222 3.761 2.222 8.137t-2.222 8.103q-2.051 3.692-5.675 5.675-3.658 2.188-8.103 2.188t-8.103-2.188q-3.59-2.085-5.675-5.744-2.222-3.727-2.222-8 0-4.376 2.222-8.103 2.051-3.624 5.726-5.778t8.085-2.154z"></path>
+</svg>
+                                    <svg class="waas-icon icon-star-circle-full " version="1.1" xmlns="http://www.w3.org/2000/svg"  viewBox="0 0 32 32">
+<path  fill="currentColor" d="M22.769 25.658l-1.812-7.761 6.017-5.197-7.863-0.684-3.077-7.214-3.145 7.282-7.863 0.615 5.983 5.197-1.778 7.761 6.803-4.137zM16.034 0.017q4.41 0 8.068 2.188 3.624 1.983 5.675 5.675 2.222 3.761 2.222 8.137t-2.222 8.103q-2.051 3.692-5.675 5.675-3.658 2.188-8.103 2.188t-8.103-2.188q-3.59-2.085-5.675-5.744-2.222-3.727-2.222-8 0-4.376 2.222-8.103 2.051-3.624 5.726-5.778t8.085-2.154z"></path>
+</svg>
+                                    <svg class="waas-icon icon-star-circle-full " version="1.1" xmlns="http://www.w3.org/2000/svg"  viewBox="0 0 32 32">
+<path  fill="currentColor" d="M22.769 25.658l-1.812-7.761 6.017-5.197-7.863-0.684-3.077-7.214-3.145 7.282-7.863 0.615 5.983 5.197-1.778 7.761 6.803-4.137zM16.034 0.017q4.41 0 8.068 2.188 3.624 1.983 5.675 5.675 2.222 3.761 2.222 8.137t-2.222 8.103q-2.051 3.692-5.675 5.675-3.658 2.188-8.103 2.188t-8.103-2.188q-3.59-2.085-5.675-5.744-2.222-3.727-2.222-8 0-4.376 2.222-8.103 2.051-3.624 5.726-5.778t8.085-2.154z"></path>
+</svg>
+                                    <svg class="waas-icon icon-star-circle-full " version="1.1" xmlns="http://www.w3.org/2000/svg"  viewBox="0 0 32 32">
+<path  fill="currentColor" d="M22.769 25.658l-1.812-7.761 6.017-5.197-7.863-0.684-3.077-7.214-3.145 7.282-7.863 0.615 5.983 5.197-1.778 7.761 6.803-4.137zM16.034 0.017q4.41 0 8.068 2.188 3.624 1.983 5.675 5.675 2.222 3.761 2.222 8.137t-2.222 8.103q-2.051 3.692-5.675 5.675-3.658 2.188-8.103 2.188t-8.103-2.188q-3.59-2.085-5.675-5.744-2.222-3.727-2.222-8 0-4.376 2.222-8.103 2.051-3.624 5.726-5.778t8.085-2.154z"></path>
+</svg>
+                                </div>
+
+                                <div class="reviews-extern-stars-score clr-primary-1" style="width: 87%">
+                                    <svg class="waas-icon icon-star-circle-full " version="1.1" xmlns="http://www.w3.org/2000/svg"  viewBox="0 0 32 32">
+<path  fill="currentColor" d="M22.769 25.658l-1.812-7.761 6.017-5.197-7.863-0.684-3.077-7.214-3.145 7.282-7.863 0.615 5.983 5.197-1.778 7.761 6.803-4.137zM16.034 0.017q4.41 0 8.068 2.188 3.624 1.983 5.675 5.675 2.222 3.761 2.222 8.137t-2.222 8.103q-2.051 3.692-5.675 5.675-3.658 2.188-8.103 2.188t-8.103-2.188q-3.59-2.085-5.675-5.744-2.222-3.727-2.222-8 0-4.376 2.222-8.103 2.051-3.624 5.726-5.778t8.085-2.154z"></path>
+</svg>
+                                    <svg class="waas-icon icon-star-circle-full " version="1.1" xmlns="http://www.w3.org/2000/svg"  viewBox="0 0 32 32">
+<path  fill="currentColor" d="M22.769 25.658l-1.812-7.761 6.017-5.197-7.863-0.684-3.077-7.214-3.145 7.282-7.863 0.615 5.983 5.197-1.778 7.761 6.803-4.137zM16.034 0.017q4.41 0 8.068 2.188 3.624 1.983 5.675 5.675 2.222 3.761 2.222 8.137t-2.222 8.103q-2.051 3.692-5.675 5.675-3.658 2.188-8.103 2.188t-8.103-2.188q-3.59-2.085-5.675-5.744-2.222-3.727-2.222-8 0-4.376 2.222-8.103 2.051-3.624 5.726-5.778t8.085-2.154z"></path>
+</svg>
+                                    <svg class="waas-icon icon-star-circle-full " version="1.1" xmlns="http://www.w3.org/2000/svg"  viewBox="0 0 32 32">
+<path  fill="currentColor" d="M22.769 25.658l-1.812-7.761 6.017-5.197-7.863-0.684-3.077-7.214-3.145 7.282-7.863 0.615 5.983 5.197-1.778 7.761 6.803-4.137zM16.034 0.017q4.41 0 8.068 2.188 3.624 1.983 5.675 5.675 2.222 3.761 2.222 8.137t-2.222 8.103q-2.051 3.692-5.675 5.675-3.658 2.188-8.103 2.188t-8.103-2.188q-3.59-2.085-5.675-5.744-2.222-3.727-2.222-8 0-4.376 2.222-8.103 2.051-3.624 5.726-5.778t8.085-2.154z"></path>
+</svg>
+                                    <svg class="waas-icon icon-star-circle-full " version="1.1" xmlns="http://www.w3.org/2000/svg"  viewBox="0 0 32 32">
+<path  fill="currentColor" d="M22.769 25.658l-1.812-7.761 6.017-5.197-7.863-0.684-3.077-7.214-3.145 7.282-7.863 0.615 5.983 5.197-1.778 7.761 6.803-4.137zM16.034 0.017q4.41 0 8.068 2.188 3.624 1.983 5.675 5.675 2.222 3.761 2.222 8.137t-2.222 8.103q-2.051 3.692-5.675 5.675-3.658 2.188-8.103 2.188t-8.103-2.188q-3.59-2.085-5.675-5.744-2.222-3.727-2.222-8 0-4.376 2.222-8.103 2.051-3.624 5.726-5.778t8.085-2.154z"></path>
+</svg>
+                                    <svg class="waas-icon icon-star-circle-full " version="1.1" xmlns="http://www.w3.org/2000/svg"  viewBox="0 0 32 32">
+<path  fill="currentColor" d="M22.769 25.658l-1.812-7.761 6.017-5.197-7.863-0.684-3.077-7.214-3.145 7.282-7.863 0.615 5.983 5.197-1.778 7.761 6.803-4.137zM16.034 0.017q4.41 0 8.068 2.188 3.624 1.983 5.675 5.675 2.222 3.761 2.222 8.137t-2.222 8.103q-2.051 3.692-5.675 5.675-3.658 2.188-8.103 2.188t-8.103-2.188q-3.59-2.085-5.675-5.744-2.222-3.727-2.222-8 0-4.376 2.222-8.103 2.051-3.624 5.726-5.778t8.085-2.154z"></path>
+</svg>
+                                </div>
+                            </div>
+                            8.7/10                        </div>
+                    </div>
+
+                    
+            </a>
+        </div>
+    </div>
+
+
+
+
+
+    </div>                                            </div>
+                                        </div>
+                                                                                <div class="column column-2 text-right">
+                                            <div class="column-in">
+                                                <div class="component-group  component-group-2 component-group-flexible">    <div class="component-header component-header-links  ">
+
+        <div class="component mb-0">
+            <div class="rest links-1">
+                <div class="links links-left  links-type-inline links-reversed  text-1 fw-400 clr-white-1">
+                    <div class="links-in">
+                                                    <a href="tel:0174%20-%2063%2001%2091" target="" class="link">
+                                <div class="link-text">
+                                    Neem contact met ons op: 0174 - 63 01 91                                </div>
+                            </a>
+                                                </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    </div>                                            </div>
+                                        </div>
+                                        
+                                </div>
+
+                                <div class="clear"></div>
+                            </div>
+                        </div>
+
+                        <div class="backgrounds "><div class="background op-100 background-horizontal-left background-vertical-top w-perc-100 h-perc-100 l-perc-0 t-perc-0 "><div class="background-in background-color bg-black-1"></div></div></div>                        
+
+                    </div>
+                </div>
+
+                
+                <div class="header-row header-row-transparent sticky toggle-hide  mobile-hide">
+                    <div class="header-row-in sticky-in">
+                        <div class="container container-6">
+                            <div class="wrapper wrapper-1">
+                                <div class="columns first-col-space last-col-space" data-columns="2">
+
+                                                                            <div class="column column-1 text-left">
+                                            <div class="column-in">
+                                                <div class="component-group  component-group-2 component-group-flexible"><div class="component-header component-header-image  ">
+    <div class="component ">
+        <div class="image">
+            <a href="https://www.verkade-keukens.nl/" target="">            <img src="https://d2ftqzf4nsbvwq.cloudfront.net/wp-content/uploads/www.verkade-keukens.nl/2019/10/logo-verkade-keukens-2022-grijs.png" width="175" height="45"  alt="Verkade Keukens" title="Verkade Keukens"/>
+            </a>        </div>
+    </div>
+</div></div>                                            </div>
+                                        </div>
+                                                                                <div class="column column-2 text-right">
+                                            <div class="column-in">
+                                                <div class="component-group  component-group-2 component-group-flexible"><div class="component-header component-header-nav  ">
+
+    <div class="nav text-2 clr-grey-4 fw-500 bg-none mb-0" >
+
+                        <div class="nav-item bg-hover-white-1 clr-hover-primary-2">
+                    <a class="bg-hover-white-1 clr-hover-primary-2  " href="https://www.verkade-keukens.nl/keukens/" target="_self">KEUKENS</a>                </div>
+                                <div class="nav-item bg-hover-white-1 clr-hover-primary-2">
+                    <a class="bg-hover-white-1 clr-hover-primary-2  " href="https://www.verkade-keukens.nl/keuken-apparatuur/" target="_self">APPARATUUR</a>                </div>
+                                <div class="nav-item bg-hover-white-1 clr-hover-primary-2">
+                    <a class="bg-hover-white-1 clr-hover-primary-2  " href="https://www.verkade-keukens.nl/inspiratie/" target="_self">INSPIRATIE</a>                </div>
+                                <div class="nav-item bg-hover-white-1 clr-hover-primary-2">
+                    <a class="bg-hover-white-1 clr-hover-primary-2  " href="https://www.verkade-keukens.nl/over-ons/" target="_self">OVER ONS</a>                </div>
+                                <div class="nav-item bg-hover-white-1 clr-hover-primary-2">
+                    <a class="bg-hover-white-1 clr-hover-primary-2  " href="https://www.verkade-keukens.nl/reviews/" target="_self">REVIEWS</a>                </div>
+                                <div class="nav-item bg-hover-white-1 clr-hover-primary-2">
+                    <a class="bg-hover-white-1 clr-hover-primary-2  has-submenu" href="https://www.verkade-keukens.nl/contact/" target="_self">CONTACT<span class="toggle-nav"><svg class="waas-icon icon-arrow-down " version="1.1" xmlns="http://www.w3.org/2000/svg"  viewBox="0 0 32 32">
+<path  fill="currentColor" d="M3.744 6.384l12.256 11.936 12.256-11.936 3.744 3.68-16 15.552-16-15.552z"></path>
+</svg>
+<svg class="waas-icon icon-arrow-right " version="1.1" xmlns="http://www.w3.org/2000/svg"  viewBox="0 0 32 32">
+<path  fill="currentColor" d="M6.378 3.772l11.924 12.212-11.924 12.244 3.708 3.772 15.536-16.016-15.536-15.984z"></path>
+</svg>
+<span></a>                            <div class="nav-item-sub bg-grey-4 clr-grey-2 ">
+                                                                        <a class="bg-hover-none clr-hover-primary-2" href="https://www.verkade-keukens.nl/service/" target="_self">
+                                            STORING SERVICE                                        </a>
+                                                                    </div>
+                                            </div>
+                        <div class="clear"></div>
+    </div>
+</div>
+</div>                                            </div>
+                                        </div>
+                                        
+                                </div>
+
+                                <div class="clear"></div>
+                            </div>
+                        </div>
+
+                        <div class="backgrounds "><div class="background op-100 background-horizontal-left background-vertical-top w-perc-100 h-perc-100 l-perc-0 t-perc-0 "><div class="background-in background-color bg-primary-2"></div></div></div>                        <div class="backgrounds backgrounds-transparency"><div class="background op-100 background-horizontal-left background-vertical-top w-perc-100 h-perc-100 l-perc-0 t-perc-0 "></div></div>
+
+                    </div>
+                </div>
+
+                
+                <div class="header-row sticky notoggle-hide  desktop-hide">
+                    <div class="header-row-in sticky-in">
+                        <div class="container container-7">
+                            <div class="wrapper wrapper-1">
+                                <div class="columns first-col-space last-col-space" data-columns="3">
+
+                                                                            <div class="column column-1 text-left">
+                                            <div class="column-in">
+                                                <div class="component-group  component-group-2 component-group-flexible">
+<div class="component-header component-header-mobile-toggle">
+    <div class="nav-toggle bg-white-1">
+        <div class="nav-toggle-in">
+            <div class="nav-toggle-in-content">
+                <span class="bg-primary-2"></span>
+                <span class="bg-primary-2"></span>
+                <span class="bg-primary-2"></span>
+            </div>
+        </div>
+    </div>
+</div>
+</div>                                            </div>
+                                        </div>
+                                                                                <div class="column column-2 text-center">
+                                            <div class="column-in">
+                                                <div class="component-group  component-group-2 component-group-flexible"><div class="component-header component-header-image  ">
+    <div class="component ">
+        <div class="image">
+            <a href="https://www.verkade-keukens.nl/" target="">            <img src="https://d2ftqzf4nsbvwq.cloudfront.net/wp-content/uploads/www.verkade-keukens.nl/2019/10/logo-verkade-keukens-2022-grijs.png" width="175" height="45"  alt="Verkade Keukens" title="Verkade Keukens"/>
+            </a>        </div>
+    </div>
+</div></div>                                            </div>
+                                        </div>
+                                                                                <div class="column column-3 text-right">
+                                            <div class="column-in">
+                                                <div class="component-group  component-group-2 component-group-flexible">
+    <div class="component-header component-phone  ">
+        <a href="tel:0174 - 63 01 91">
+            <div class="text text-1 fw-700 text-center clr-primary-2">
+                <svg class="waas-icon icon-phone " version="1.1" xmlns="http://www.w3.org/2000/svg"  viewBox="0 0 32 32">
+<path  fill="currentColor" d="M32 25.221q0 0.611-0.244 1.588-0.204 0.896-0.489 1.588-0.489 1.221-2.768 2.402-2.117 1.181-4.234 1.181-0.774 0-1.181-0.081-0.814-0.163-1.262-0.326-0.407-0.081-0.977-0.285l-0.448-0.163q-0.529-0.204-0.977-0.326-0.326-0.163-0.774-0.285l-0.326-0.122q-1.343-0.529-2.076-0.896-1.099-0.489-1.913-1.018-3.013-1.873-5.944-4.845-3.216-3.216-4.967-6.066-1.181-1.873-1.791-3.949-0.081-0.081-0.489-1.14l-0.407-1.262-0.407-1.018q-0.163-0.977-0.244-1.323t-0.081-1.242q0-1.995 1.14-4.193 1.343-2.321 2.443-2.809 0.244-0.122 1.099-0.326l0.407-0.122 0.611-0.081q0.733-0.081 1.018-0.081h0.448q0.489 0.244 1.303 1.751l0.204 0.407q0.244 0.529 0.407 0.855 0.407 0.611 0.814 1.425l0.285 0.489q0.244 0.489 0.407 0.692l0.407 0.57q0.244 0.326 0.489 0.814 0.163 0.407 0.163 0.611 0 0.448-0.651 1.221l-0.285 0.285q-0.692 0.651-1.14 0.896l-0.244 0.204q-0.774 0.651-1.099 1.059-0.733 0.611-0.733 1.018 0 0.163 0.163 0.489l0.081 0.244q0.081 0.204 0.102 0.244l0.102 0.204 0.204 0.366 0.122 0.163q0.163 0.204 0.204 0.204 1.669 3.094 3.868 5.333 2.361 2.361 5.333 3.99 0.122 0 0.489 0.244l0.204 0.163q0.244 0.163 0.326 0.163 0.244 0.122 0.448 0.204t0.529 0.081q0.204 0 0.489-0.142t0.529-0.468q0.896-0.896 1.221-1.425 0.651-0.896 1.262-1.384 0.366-0.326 0.611-0.468t0.489-0.142q0.489 0 0.651 0.163 0.448 0.163 0.855 0.448 0.326 0.163 0.57 0.366t0.855 0.57l0.936 0.529q0.529 0.285 0.814 0.448 0.407 0.163 0.977 0.489l0.326 0.163q1.588 0.896 1.669 1.181 0.081 0.163 0.081 0.489z"></path>
+</svg>
+            </div>
+        </a>
+    </div>
+    </div>                                            </div>
+                                        </div>
+                                        
+                                </div>
+
+                                <div class="clear"></div>
+                            </div>
+                        </div>
+
+                        <div class="backgrounds "><div class="background op-100 background-horizontal-left background-vertical-top w-perc-100 h-perc-100 l-perc-0 t-perc-0 "><div class="background-in background-color bg-white-1"></div></div></div>                        
+
+                    </div>
+                </div>
+
+                
+                <div class="header-row header-row-transparent sticky in-mobile-nav  desktop-hide">
+                    <div class="header-row-in sticky-in">
+                        <div class="container container-6">
+                            <div class="wrapper wrapper-1">
+                                <div class="columns first-col-space last-col-space" data-columns="2">
+
+                                                                            <div class="column column-1 text-left">
+                                            <div class="column-in">
+                                                <div class="component-group  component-group-2 component-group-flexible"><div class="component-header component-header-image  ">
+    <div class="component ">
+        <div class="image">
+            <a href="https://www.verkade-keukens.nl/" target="">            <img src="https://d2ftqzf4nsbvwq.cloudfront.net/wp-content/uploads/www.verkade-keukens.nl/2019/10/logo-verkade-keukens-2022-grijs.png" width="175" height="45"  alt="Verkade Keukens" title="Verkade Keukens"/>
+            </a>        </div>
+    </div>
+</div></div>                                            </div>
+                                        </div>
+                                                                                <div class="column column-2 text-left">
+                                            <div class="column-in">
+                                                <div class="component-group  component-group-2 component-group-flexible"><div class="component-header component-header-nav  ">
+
+    <div class="nav text-6 clr-grey-2 fw-500 bg-white-1 mb-0" >
+
+                        <div class="nav-item bg-hover-white-1 clr-hover-primary-2">
+                    <a class="bg-hover-white-1 clr-hover-primary-2  " href="https://www.verkade-keukens.nl/keukens/" target="_self">KEUKENS</a>                </div>
+                                <div class="nav-item bg-hover-white-1 clr-hover-primary-2">
+                    <a class="bg-hover-white-1 clr-hover-primary-2  " href="https://www.verkade-keukens.nl/keuken-apparatuur/" target="_self">APPARATUUR</a>                </div>
+                                <div class="nav-item bg-hover-white-1 clr-hover-primary-2">
+                    <a class="bg-hover-white-1 clr-hover-primary-2  " href="https://www.verkade-keukens.nl/inspiratie/" target="_self">INSPIRATIE</a>                </div>
+                                <div class="nav-item bg-hover-white-1 clr-hover-primary-2">
+                    <a class="bg-hover-white-1 clr-hover-primary-2  " href="https://www.verkade-keukens.nl/over-ons/" target="_self">OVER ONS</a>                </div>
+                                <div class="nav-item bg-hover-white-1 clr-hover-primary-2">
+                    <a class="bg-hover-white-1 clr-hover-primary-2  " href="https://www.verkade-keukens.nl/reviews/" target="_self">REVIEWS</a>                </div>
+                                <div class="nav-item bg-hover-white-1 clr-hover-primary-2">
+                    <a class="bg-hover-white-1 clr-hover-primary-2  has-submenu mobile-arrow-width" href="https://www.verkade-keukens.nl/contact/" target="_self">CONTACT<span class="toggle-nav"><svg class="waas-icon icon-arrow-down " version="1.1" xmlns="http://www.w3.org/2000/svg"  viewBox="0 0 32 32">
+<path  fill="currentColor" d="M3.744 6.384l12.256 11.936 12.256-11.936 3.744 3.68-16 15.552-16-15.552z"></path>
+</svg>
+<svg class="waas-icon icon-arrow-right " version="1.1" xmlns="http://www.w3.org/2000/svg"  viewBox="0 0 32 32">
+<path  fill="currentColor" d="M6.378 3.772l11.924 12.212-11.924 12.244 3.708 3.772 15.536-16.016-15.536-15.984z"></path>
+</svg>
+<span></a>                            <div class="nav-item-sub bg-white-1 clr-grey-2 ">
+                                                                        <a class="bg-hover-white-1 clr-hover-primary-2" href="https://www.verkade-keukens.nl/service/" target="_self">
+                                            STORING SERVICE                                        </a>
+                                                                    </div>
+                                            </div>
+                        <div class="clear"></div>
+    </div>
+</div>
+</div>                                            </div>
+                                        </div>
+                                        
+                                </div>
+
+                                <div class="clear"></div>
+                            </div>
+                        </div>
+
+                        <div class="backgrounds "><div class="background op-100 background-horizontal-left background-vertical-top w-perc-100 h-perc-100 l-perc-0 t-perc-0 "><div class="background-in background-color bg-white-1"></div></div></div>                        <div class="backgrounds backgrounds-transparency"><div class="background op-100 background-horizontal-left background-vertical-top w-perc-100 h-perc-100 l-perc-0 t-perc-0 "></div></div>
+
+                    </div>
+                </div>
+
+                    </div>
+	
+	
+	
+    <div class="header-mobile-nav bg-white-1">
+        <div class="header-mobile-nav-close">
+            <div class="nav-toggle bg-white-1">
+                <div class="nav-toggle-in">
+                    <div class="nav-toggle-in-content">
+                        <span class="bg-primary-2"></span>
+                        <span class="bg-primary-2"></span>
+                        <span class="bg-primary-2"></span>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="header-mobile-nav-in">
+            <!-- PLACEHOLDER MOBILE -->
+        </div>
+    </div>
+
+</header>
+
+<script type="text/javascript" nowprocket data-cookieconsent="ignore">
+    jQuery(window).trigger('headerLoaded');
+</script>
+	        <div class="bricks">                
+	<div class="brick brick-featured-1 " data-jumper-id="top"  >
+		<div class="container container-1" >
+			<div class="wrapper wrapper-1">
+				<div class="brick-in">
+
+					<div class="featured-content featured-content-left">
+
+						<div class="component-group  component-group-1 component-group-flexible"><div class="component mb-0  "><h1 class="title title-2 fw-700 clr-white-1 text-left">Contact opnemen met Verkade Keukens. Uw keukenspeciaalzaak!</h1></div></div>
+
+					</div>
+				</div>
+			</div>
+		</div>
+		<div class="backgrounds "><div class="background op-100 background-horizontal-center background-vertical-center w-perc-100 h-perc-100 "><div class="background-in background-image" style="background-image:url('https://d2ftqzf4nsbvwq.cloudfront.net/wp-content/uploads/www.verkade-keukens.nl/2021/03/09_2020_Verkade_Schroder_Wit_Hoek_L_HR-1.jpg')"></div><div class="background-overlay op-25 bg-black-1"></div></div><div class="background op-65 background-horizontal-left background-vertical-center w-perc-50 h-perc-100 l-perc-0 "><div class="background-in background-color bg-black-1"></div></div></div>	</div>
+
+
+            <script type="text/javascript" nowprocket data-cookieconsent="ignore">
+                jQuery(window).trigger('firstBrickLoaded');
+            </script>
+                <div class="brick brick-contact-1 " >
+        <div class="container container-4" >
+            <div class="wrapper wrapper-1">
+                <div class="brick-in">
+
+                    <div class="contact-rows">
+
+                        <div class="contact-row" >
+                            <div class="column contact-column">
+<iframe data-tally-src="https://tally.so/embed/nPQGXP?hideTitle=1&transparentBackground=1&dynamicHeight=1" loading="lazy" width="100%" height="462" frameborder="0" marginheight="0" marginwidth="0" title="Contact"></iframe>
+<script>var d=document,w="https://tally.so/widgets/embed.js",v=function(){"undefined"!=typeof Tally?Tally.loadEmbeds():d.querySelectorAll("iframe[data-tally-src]:not([src])").forEach((function(e){e.src=e.dataset.tallySrc}))};if("undefined"!=typeof Tally)v();else if(d.querySelector('script[src="'+w+'"]')==null){var s=d.createElement("script");s.src=w,s.onload=v,s.onerror=v,d.body.appendChild(s);}</script>
+                                                                <div  data-column-sticky="none" data-column-sticky-offset="0" data-column-sticky-variant="">
+                                    <div class="box box-1 " >
+                                        <div class="background op-100 bg-none"></div>
+                                        <div class="box-in">
+<a href="https://www.google.com/maps/place/Verkade+Keukens/@52.0160402,4.2442102,894m/data=!3m2!1e3!4b1!4m6!3m5!1s0x47c5b3c5914bc487:0x2beaee702efdc8a5!8m2!3d52.0160369!4d4.2467851!16s%2Fg%2F1ts_5sgj?entry=ttu&amp;g_ep=EgoyMDI1MDEyOS4xIKXMDSoASAFQAw%3D%3D" target="_blank" rel="noopener">Mariendijk 115</a><br />
+<a href="https://www.google.com/maps/place/Verkade+Keukens/@52.0160402,4.2442102,894m/data=!3m2!1e3!4b1!4m6!3m5!1s0x47c5b3c5914bc487:0x2beaee702efdc8a5!8m2!3d52.0160369!4d4.2467851!16s%2Fg%2F1ts_5sgj?entry=ttu&amp;g_ep=EgoyMDI1MDEyOS4xIKXMDSoASAFQAw%3D%3D" target="_blank" rel="noopener">2295 LJ Kwintsheul</a></p>
+<p><strong>Openingstijden</strong><br />
+Maandag: 13:00 - 17:30<br />
+Dinsdag: 09:00 - 17:30<br />
+Woensdag: 09:00 - 17:30<br />
+Donderdag: 09:00 - 17:30<br />
+Vrijdag: 09:00 - 17:30<br />
+Zaterdag: 09:00 - 16:30<br />
+Zondag: Gesloten</p>
+</div></div>        <div class="component mb-15  ">
+            <div class="button-group button-group-left" >
+                <div class="component mb-0 "><a href="https://www.google.com/maps/dir//Verkade+Keukens,+Mari%C3%ABndijk+115,+2295+LJ+Kwintsheul/@52.0160369,4.2467851,17z/data=!4m17!1m7!3m6!1s0x47c5b3c5914bc487:0x2beaee702efdc8a5!2sVerkade+Keukens!8m2!3d52.0160369!4d4.2467851!16s%2Fg%2F1ts_5sgj!4m8!1m0!1m5!1m1!1s0x47c5b3c5914bc487:0x2beaee702efdc8a5!2m2!1d4.2468475!2d52.0160543!3e1?entry=ttu&amp;g_ep=EgoyMDI1MDQzMC4xIKXMDSoJLDEwMjExNDUzSAFQAw%3D%3D" target="_blank" class="button-new button-new-7098 hover-none">	
+			<div class="button-hover hover-none"></div>
+			<div class="button-new-in text-2 fw-500 clr-primary-2 clr-hover-grey-2 text-left ">
+				
+				Plan uw route
+				<svg class="waas-icon icon-arrow-8-right button-icon-right" version="1.1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 32 32">
+<path fill="currentColor" d="M1.483 32q-0.622 0-1.052-0.454t-0.43-1.028 0.43-1.052l28.987-28.987q0.478-0.478 1.076-0.478t1.052 0.454 0.454 1.052-0.478 1.076l-28.987 28.987q-0.43 0.43-1.052 0.43zM30.469 26.26q-0.622 0-1.052-0.43t-0.43-1.052v-21.764h-21.764q-0.622 0-1.052-0.43t-0.431-1.052 0.431-1.052 1.052-0.43h23.247q0.622 0 1.052 0.43t0.43 1.052v23.247q0 0.622-0.43 1.052t-1.052 0.43z"></path>
+</svg>
+
+			</div>
+		</a></div>            </div>
+        </div>
+        <div class="component mb-15  "><div class="text text-2 fw-400 clr-grey-2 text-left"><p><strong>Bijzondere openingstijden 2025</strong><br />
+Hemelvaartsdag: Gesloten<br />
+2e Pinksterdag: Gesloten<br />
+1e Kerstdag: Gesloten<br />
+2e Kerstdag: Gesloten<br />
+31 december: Gesloten</p>
+<p><strong>Aangepaste dagen:</strong></p>
+<p>07-05-2025: 9:00 - 16:00 (We sluiten eerder ivm overleg)</p>
+<p><a href="https://www.inretail.nl/wp-content/uploads/2022/09/AV2022_WONEN_onlineversie.pdf" target="_blank" rel="noopener">Algemene voorwaarden</a><br />
+<a href="https://d2ftqzf4nsbvwq.cloudfront.net/wp-content/uploads/www.verkade-keukens.nl/2021/03/Keukenchecklist.pdf" target="_blank" rel="noopener">Keukenchecklist</a></p>
+<p>&nbsp;</p>
+<p>&nbsp;</p>
+</div></div></div>                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="column contact-column">
+                                                                <div  data-column-sticky="none" data-column-sticky-offset="0" data-column-sticky-variant="top">
+                                    <div class="box box-1 " >
+                                        <div class="background op-100 bg-none"></div>
+                                        <div class="box-in">
+                                            <div class="component-group  component-group-1 component-group-flexible"><div class="component mb-15  "><h2 class="title title-1 fw-700 clr-black-1 text-left">Zoekt u een nieuwe keuken of heeft u een vraag? Neem contact met ons op.</h2></div>
+<div class="component mb-15  ">
+    
+                
+<div class='gf_browser_unknown form-body gform_wrapper gform_legacy_markup_wrapper gform-theme--no-framework form-element-6512' data-form-theme='legacy' data-form-index='0' id='gform_wrapper_4' >
+<div id='gf_4' class='gform_anchor' tabindex='-1'>
+</div>
+<form method='post' enctype='multipart/form-data' target='gform_ajax_frame_4' id='gform_4'  action='/contact/#gf_4' data-formid='4' novalidate>
+                        
+<div class='gform-body gform_body form-body'>
+<div id='gform_fields_4' class='gform_fields top_label form_sublabel_below description_below validation_below'>
+<div class="form-row"><div class="form-column"><div class="form-column-in"><div class="component mb-0"><div class="form text-1"><div id="field_4_1" class="gfield form-text-in form-new-6512 text-2   input-row-type-text gfield--type-text gfield--input-type-text gfield_contains_required  gfield--no-description  field_validation_below"  >
+<label  class='gfield_label gform-field-label' for='input_4_1'><div class="label fw-500 ">Naam
+ *</div>
+<input name='input_1' id='input_4_1' type='text' value='' class='input-text-new-6512 fw-400 medium'     aria-required="true" aria-invalid="false"   />
+<svg class="waas-icon icon-check " version="1.1" xmlns="http://www.w3.org/2000/svg"  viewBox="0 0 32 32">
+<path  fill="currentColor" d="M32 8.176q0 0.864-0.576 1.504l-17.728 18.496q-0.288 0.288-0.688 0.464t-0.752 0.176q-0.736 0-1.376-0.64l-10.304-10.752q-0.576-0.544-0.576-1.44t0.576-1.408l2.816-2.944q0.512-0.64 1.392-0.64t1.392 0.64l6.080 6.304 13.568-14.112q0.256-0.288 0.624-0.464t0.752-0.176q0.8 0 1.44 0.64l2.784 2.912q0.288 0.288 0.432 0.672t0.144 0.768z"></path>
+</svg>
+</label></div></div></div></div></div></div>
+<div class="form-row"><div class="form-column"><div class="form-column-in"><div class="component mb-0"><div class="form text-1"><div id="field_4_2" class="gfield form-text-in form-new-6512 text-2   input-row-type-email gfield--type-email gfield--input-type-email gfield_contains_required  gfield--no-description  field_validation_below"  >
+<label  class='gfield_label gform-field-label' for='input_4_2'><div class="label fw-500 ">E-mail
+ *</div>
+                            
+<input name='input_2' id='input_4_2' type='email' value='' class='input-text-new-6512 fw-400 medium'    aria-required="true" aria-invalid="false"  />
+                        
+<svg class="waas-icon icon-check " version="1.1" xmlns="http://www.w3.org/2000/svg"  viewBox="0 0 32 32">
+<path  fill="currentColor" d="M32 8.176q0 0.864-0.576 1.504l-17.728 18.496q-0.288 0.288-0.688 0.464t-0.752 0.176q-0.736 0-1.376-0.64l-10.304-10.752q-0.576-0.544-0.576-1.44t0.576-1.408l2.816-2.944q0.512-0.64 1.392-0.64t1.392 0.64l6.080 6.304 13.568-14.112q0.256-0.288 0.624-0.464t0.752-0.176q0.8 0 1.44 0.64l2.784 2.912q0.288 0.288 0.432 0.672t0.144 0.768z"></path>
+</svg>
+</label></div></div></div></div></div></div>
+<div class="form-row"><div class="form-column"><div class="form-column-in"><div class="component mb-0"><div class="form text-1"><div id="field_4_5" class="gfield form-text-in form-new-6512 text-2   input-row-type-phone gfield--type-phone gfield--input-type-phone gfield--width-full gfield_contains_required  gfield--no-description  field_validation_below phone-format-international"  data-field-class="phone-format-international" >
+<label  class='gfield_label gform-field-label' for='input_4_5'><div class="label fw-500 ">Telefoon
+ *</div>
+<input    name='input_5' id='input_4_5' type='tel' value='' class='input-text-new-6512 fw-400 large'   aria-required="true" aria-invalid="false"   />
+<svg class="waas-icon icon-check " version="1.1" xmlns="http://www.w3.org/2000/svg"  viewBox="0 0 32 32">
+<path  fill="currentColor" d="M32 8.176q0 0.864-0.576 1.504l-17.728 18.496q-0.288 0.288-0.688 0.464t-0.752 0.176q-0.736 0-1.376-0.64l-10.304-10.752q-0.576-0.544-0.576-1.44t0.576-1.408l2.816-2.944q0.512-0.64 1.392-0.64t1.392 0.64l6.080 6.304 13.568-14.112q0.256-0.288 0.624-0.464t0.752-0.176q0.8 0 1.44 0.64l2.784 2.912q0.288 0.288 0.432 0.672t0.144 0.768z"></path>
+</svg>
+</label></div></div></div></div></div></div>
+<div class="form-row"><div class="form-column"><div class="form-column-in"><div class="component mb-0"><div class="form textarea-1"><div id="field_4_3" class="gfield form-textarea-in form-new-6512 text-2   input-row-input-row input-row-type-textarea gfield--input-row input-row-type-textarea gfield--input-input-row input-row-type-textarea gfield_contains_required  gfield--no-description  field_validation_below"  >
+<label  class='gfield_label gform-field-label' for='input_4_3'><div class="label fw-500 ">Bericht
+ *</div>
+<textarea name='input_3' id='input_4_3' class='input-text-new-6512 fw-400 textarea medium'     aria-required="true" aria-invalid="false"   rows='10' cols='50'>
+</textarea>
+</label></div></div></div></div></div></div>
+<div class="form-row"><div class="form-column"><div class="form-column-in"><div class="component mb-0"><div class="form check-1"><div id="field_4_4" class="gfield form-check-in form-new-6512 text-0  input-row-type-checkbox gfield--type-checkbox gfield--type-choice gfield--input-type-checkbox gfield_contains_required  gfield--no-description  field_validation_below"  >
+<div class="label fw-500">*</div>
+<div class='radio-new-6512 fw-400 gfield_checkbox' id='input_4_4'>
+<label class='form-check radio-new-6512 fw-400 gchoice gchoice_4_4_1'  for='choice_4_4_1' id='label_4_4_1' class='radio-new-6512 fw-400 gform-field-label gform-field-label--type-inline'>
+								
+<input class='radio-new-6512 fw-400 gfield-choice-input' name='input_4.1' type='checkbox'  value='We gebruiken de informatie in dit formulier om contact met u op te nemen over uw vraag. Door dit formulier te verzenden, gaat u ermee akkoord dat wij uw gegevens kunnen verzamelen en gebruiken voor de redenen die hierboven genoemd staan.'  id='choice_4_4_1'   />
+								
+<span class="form-checkmark"></span><span class="value">We gebruiken de informatie in dit formulier om contact met u op te nemen over uw vraag. Door dit formulier te verzenden, gaat u ermee akkoord dat wij uw gegevens kunnen verzamelen en gebruiken voor de redenen die hierboven genoemd staan.
+</span>
+							
+</label>
+</div>
+</div></div></div></div></div></div>
+<div class="form-row"><div class="form-column"><div class="form-column-in"><div class="component mb-0"><div class="form text-1"><div id="field_4_999" class="gfield form-text-in form-new-6512 text-2   input-row-type-hidden gfield--type-hidden meta-data-field gform_hidden  gfield--no-description  field_validation_below"  >
+<label ><div class="label fw-500 "></div>
+<input name='input_999' id='input_4_999' type='hidden' class='input-text-new-6512 fw-400 gform_hidden'  aria-invalid="false" value='' />
+<svg class="waas-icon icon-check " version="1.1" xmlns="http://www.w3.org/2000/svg"  viewBox="0 0 32 32">
+<path  fill="currentColor" d="M32 8.176q0 0.864-0.576 1.504l-17.728 18.496q-0.288 0.288-0.688 0.464t-0.752 0.176q-0.736 0-1.376-0.64l-10.304-10.752q-0.576-0.544-0.576-1.44t0.576-1.408l2.816-2.944q0.512-0.64 1.392-0.64t1.392 0.64l6.080 6.304 13.568-14.112q0.256-0.288 0.624-0.464t0.752-0.176q0.8 0 1.44 0.64l2.784 2.912q0.288 0.288 0.432 0.672t0.144 0.768z"></path>
+</svg>
+</label></div></div></div></div></div></div>
+<div class="form-row"><div class="form-column"><div class="form-column-in"><div class="component mb-0"><div class="hidden"><div id="field_4_1000" class="gfield input-row input-row-type-honeypot gfield--type-honeypot gform_validation_container  gfield--has-description  field_validation_below"  >
+<label class='gfield_label gform-field-label' for='input_4_1000'>Comments
+</label>
+<div class='ginput_container'>
+<input name='input_1000' id='input_4_1000' type='text' value='' autocomplete='new-password'/>
+</div>
+<div class='gfield_description' id='gfield_description_4_1000'>Dit veld is bedoeld voor validatiedoeleinden en moet niet worden gewijzigd.
+</div>
+</div></div></div></div></div></div>
+</div>
+</div>
+        
+<div class='gform-footer gform_footer top_label'> 
+<div class="form-row">
+<div class="form-column">
+<div class="form-column-in">
+<div class="button-group button-group-right ">
+<div class="component mb-0">
+<button type="submit" id="gform_submit_button_4" class="button button-new  button-new-6497 hover-none" onclick="gform.submission.handleButtonClick(this);" data-submission-type="submit">
+<div class="button-hover hover-none"></div>
+<div class="button-new-in  text-3 fw-500 clr-black-1 clr-hover-white-1 text-center">Versturen
+</div>
+</button>
+</div>
+</div>
+</div>
+</div>
+</div> 
+<input type='hidden' name='gform_ajax' value='form_id=4&amp;title=&amp;description=&amp;tabindex=0&amp;theme=legacy&amp;hash=046f0b240d83c081e762f1df0c153eb3' />
+            
+<input type='hidden' class='gform_hidden' name='gform_submission_method' data-js='gform_submission_method_4' value='iframe' />
+            
+<input type='hidden' class='gform_hidden' name='gform_theme' data-js='gform_theme_4' id='gform_theme_4' value='legacy' />
+            
+<input type='hidden' class='gform_hidden' name='gform_style_settings' data-js='gform_style_settings_4' id='gform_style_settings_4' value='' />
+            
+<input type='hidden' class='gform_hidden' name='is_submit_4' value='1' />
+            
+<input type='hidden' class='gform_hidden' name='gform_submit' value='4' />
+            
+            
+<input type='hidden' class='gform_hidden' name='gform_unique_id' value='' />
+            
+<input type='hidden' class='gform_hidden' name='state_4' value='WyJbXSIsIjM5Yzk4NTQ4ZTZmOGYyMTJlNTcyM2NkMTcwOTBhODNhIl0=' />
+            
+<input type='hidden' autocomplete='off' class='gform_hidden' name='gform_target_page_number_4' id='gform_target_page_number_4' value='0' />
+            
+<input type='hidden' autocomplete='off' class='gform_hidden' name='gform_source_page_number_4' id='gform_source_page_number_4' value='1' />
+            
+<input type='hidden' name='gform_field_values' value='assortiment=&amp;assortiment_id=' />
+            
+        
+</div>
+                        
+<p style="display: none !important;" class="akismet-fields-container" data-prefix="ak_"><label>&#916;<textarea name="ak_hp_textarea" cols="45" rows="8" maxlength="100"></textarea></label><input type="hidden" id="ak_js_1" name="ak_js" value="32"/><script>document.getElementById( "ak_js_1" ).setAttribute( "value", ( new Date() ).getTime() );</script></p><input type="hidden" name="styling_info" value="eyJ7e2lucHV0X2luX2NsYXNzZXN9fSI6ImZvcm0tbmV3LTY1MTIgdGV4dC0yICIsInt7bGFiZWxfY2xhc3N9fSI6ImxhYmVsIGZ3LTUwMCAiLCJ7e2lucHV0X2NsYXNzfX0iOiJpbnB1dC10ZXh0LW5ldy02NTEyIGZ3LTQwMCIsInt7aW5wdXRfaW5fY2xhc3Nlc19zZWxlY3R9fSI6ImZvcm0tbmV3LTY1MTIgdGV4dC0yIiwie3tsYWJlbF9jbGFzc19zZWxlY3R9fSI6ImxhYmVsIGZ3LTUwMCIsInt7aW5wdXRfY2xhc3Nfc2VsZWN0fX0iOiJzZWxlY3QtbmV3LTY1MTIgZnctNDAwIiwie3tpbnB1dF9pbl9jbGFzc2VzX3JhZGlvfX0iOiJmb3JtLW5ldy02NTEyIHRleHQtMCIsInt7bGFiZWxfY2xhc3NfcmFkaW99fSI6ImxhYmVsIGZ3LTUwMCIsInt7aW5wdXRfY2xhc3NfcmFkaW99fSI6InJhZGlvLW5ldy02NTEyIGZ3LTQwMCIsInt7cXVhbnRpdHl9fSI6ImZvcm0tbmV3LTY1MTIiLCJ7e3F1YW50aXR5X2lufX0iOiJzcGlubmVyLW5ldy02NTEyIiwie3txdWFudGl0eV9pbnB1dH19IjoidGV4dC0yIGNsci1ncmV5LTMgZnctNDAwIiwie3txdWFudGl0eV9hcnJvd319IjoiIiwie3txdWFudGl0eV9hcnJvd19pY29ufX0iOiIiLCJ7e21lc3NhZ2VfaW5mb19jbGFzc2VzfX0iOiJ0ZXh0LTIgY2xyLWdyZXktMSBmdy03MDAiLCJ7e21lc3NhZ2VfZXJyb3JfY2xhc3Nlc319IjoidGV4dC0yIGNsci1yZWQtMSBmdy03MDAiLCJ7e2Zvcm1fZWxlbWVudF9pZH19IjoiZm9ybS1lbGVtZW50LTY1MTIiLCJ7e2J1dHRvbl90eXBlfX0iOiJidXR0b24tbmV3ICBidXR0b24tbmV3LTY0OTcgaG92ZXItbm9uZSIsInt7YnV0dG9uX2dyb3VwX3R5cGV9fSI6InJpZ2h0Iiwie3tidXR0b25fZ3JvdXBfc2l6ZX19IjoiIiwie3tidXR0b25faWNvbl9sZWZ0fX0iOiIiLCJ7e2J1dHRvbl9pY29uX3JpZ2h0fX0iOiIiLCJ7e2J1dHRvbl9pbn19IjoiYnV0dG9uLW5ldy1pbiAgdGV4dC0zIGZ3LTUwMCBjbHItYmxhY2stMSBjbHItaG92ZXItd2hpdGUtMSB0ZXh0LWNlbnRlciIsIjxkaXYgY2xhc3M9XCJidXR0b24tbmV3LWluIjoiPGRpdiBjbGFzcz1cImJ1dHRvbi1ob3ZlciBob3Zlci1ub25lXCI+PFwvZGl2PlxuPGRpdiBjbGFzcz1cImJ1dHRvbi1uZXctaW4iLCJ7e2Fzc29ydGltZW50fX0iOiIifQ==" />
+</form>
+                        
+</div>
+		                
+<iframe style='display:none;width:0px;height:0px;' src='about:blank' name='gform_ajax_frame_4' id='gform_ajax_frame_4' title='Dit iframe bevat de vereiste logica om Ajax aangedreven Gravity Forms te verwerken.'>
+</iframe>
+		                
+<script type="text/javascript" data-cookieconsent="ignore">
+/* 
+<![CDATA[ */
+ gform.initializeOnLoaded( function() {gformInitSpinner( 4, 'https://www.verkade-keukens.nl/wp-content/plugins/gravityforms/images/spinner.svg', true );jQuery('#gform_ajax_frame_4').on('load',function(){var contents = jQuery(this).contents().find('*').html();var is_postback = contents.indexOf('GF_AJAX_POSTBACK') >= 0;if(!is_postback){return;}var form_content = jQuery(this).contents().find('#gform_wrapper_4');var is_confirmation = jQuery(this).contents().find('#gform_confirmation_wrapper_4').length > 0;var is_redirect = contents.indexOf('gformRedirect(){') >= 0;var is_form = form_content.length > 0 && ! is_redirect && ! is_confirmation;var mt = parseInt(jQuery('html').css('margin-top'), 10) + parseInt(jQuery('body').css('margin-top'), 10) + 100;if(is_form){jQuery('#gform_wrapper_4').html(form_content.html());if(form_content.hasClass('gform_validation_error')){jQuery('#gform_wrapper_4').addClass('gform_validation_error');} else {jQuery('#gform_wrapper_4').removeClass('gform_validation_error');}setTimeout( function() { /* delay the scroll by 50 milliseconds to fix a bug in chrome */ jQuery(document).scrollTop(jQuery('#gform_wrapper_4').offset().top - mt); }, 50 );if(window['gformInitDatepicker']) {gformInitDatepicker();}if(window['gformInitPriceFields']) {gformInitPriceFields();}var current_page = jQuery('#gform_source_page_number_4').val();gformInitSpinner( 4, 'https://www.verkade-keukens.nl/wp-content/plugins/gravityforms/images/spinner.svg', true );jQuery(document).trigger('gform_page_loaded', [4, current_page]);window['gf_submitting_4'] = false;}else if(!is_redirect){var confirmation_content = jQuery(this).contents().find('.GF_AJAX_POSTBACK').html();if(!confirmation_content){confirmation_content = contents;}jQuery('#gform_wrapper_4').replaceWith(confirmation_content);jQuery(document).scrollTop(jQuery('#gf_4').offset().top - mt);jQuery(document).trigger('gform_confirmation_loaded', [4]);window['gf_submitting_4'] = false;wp.a11y.speak(jQuery('#gform_confirmation_message_4').text());}else{jQuery('#gform_4').append(contents);if(window['gformRedirect']) {gformRedirect();}}jQuery(document).trigger("gform_pre_post_render", [{ formId: "4", currentPage: "current_page", abort: function() { this.preventDefault(); } }]);                if (event && event.defaultPrevented) {                return;         }        const gformWrapperDiv = document.getElementById( "gform_wrapper_4" );        if ( gformWrapperDiv ) {            const visibilitySpan = document.createElement( "span" );            visibilitySpan.id = "gform_visibility_test_4";            gformWrapperDiv.insertAdjacentElement( "afterend", visibilitySpan );        }        const visibilityTestDiv = document.getElementById( "gform_visibility_test_4" );        let postRenderFired = false;                function triggerPostRender() {            if ( postRenderFired ) {                return;            }            postRenderFired = true;            gform.core.triggerPostRenderEvents( 4, current_page );            if ( visibilityTestDiv ) {                visibilityTestDiv.parentNode.removeChild( visibilityTestDiv );            }        }        function debounce( func, wait, immediate ) {            var timeout;            return function() {                var context = this, args = arguments;                var later = function() {                    timeout = null;                    if ( !immediate ) func.apply( context, args );                };                var callNow = immediate && !timeout;                clearTimeout( timeout );                timeout = setTimeout( later, wait );                if ( callNow ) func.apply( context, args );            };        }        const debouncedTriggerPostRender = debounce( function() {            triggerPostRender();        }, 200 );        if ( visibilityTestDiv && visibilityTestDiv.offsetParent === null ) {            const observer = new MutationObserver( ( mutations ) => {                mutations.forEach( ( mutation ) => {                    if ( mutation.type === 'attributes' && visibilityTestDiv.offsetParent !== null ) {                        debouncedTriggerPostRender();                        observer.disconnect();                    }                });            });            observer.observe( document.body, {                attributes: true,                childList: false,                subtree: true,                attributeFilter: [ 'style', 'class' ],            });        } else {            triggerPostRender();        }    } );} ); 
+/* ]]> */
+
+</script>
+</div>
+</div>                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="backgrounds "><div class="background op-100 background-horizontal-left background-vertical-top w-perc-100 h-perc-100 l-perc-0 t-perc-0 "><div class="background-in background-image" style="background-image:url('https://d2ftqzf4nsbvwq.cloudfront.net/wp-content/uploads/www.verkade-keukens.nl/2021/03/VerkadeKeukentechniek-Mariendijk-Kwintsheul-slider-001.jpg')"></div><div class="background-overlay op-95 bg-secondary-3"></div></div></div>    </div>
+
+
+
+	<div class="brick brick-content-1 "   >
+		<div class="container container-4"  >
+			<div class="wrapper wrapper-1">
+				<div class="brick-in">
+					<div class="content-rows">
+													<div class="content-row "  data-columns-break="768"  >
+																	<div class="column content-column  " >
+										<div>
+
+																																<div class="box-out">
+																								<div class="box  box-none box-ign-none  box-overflow-visible"  >
+																													<div class="box-backgrounds">
+																<div class="background box-bg "   >
+																	<div class="background-in">
+																																						<div class="background op-100 bg-none"></div>
+																																					</div>
+																</div>
+																															</div>
+
+
+														<div class="box-in" >
+															<div class="box-content " >
+																<div class="component-group  component-group-1 component-group-flexible"><div class="component mb-15  "><div class="title title-1 fw-700 clr-black-1 text-left">Afspraak voor uw nieuwe of te renoveren keuken?</div></div><div class="component mb-15  "><div class="text text-2 fw-400 clr-grey-2 text-left"><p>Om ervoor te zorgen dat we voldoende tijd hebben om uw wensen grondig door te nemen en uw vragen te beantwoorden, raden we aan om een afspraak te maken met één van onze adviseurs. Op deze manier kunnen we uw project met de aandacht behandelen die het verdient en ervoor zorgen dat u het best mogelijke advies krijgt.</p>
+</div></div><div class="component mb-15  "><h2 class="title title-1 fw-700 clr-black-1 text-left">Service aanvraag</h2></div><div class="component mb-30  "><div class="text text-2 fw-400 clr-grey-2 text-left"><p><strong>Servicehandleiding<br />
+</strong>Heeft u een probleem met uw apparatuur of keukenmeubelen? Hieronder leest u hoe u eenvoudig een servicemelding kunt maken.<strong><br />
+</strong></p>
+<p><strong>Service voor apparatuur<br />
+</strong>Voor service aan uw apparatuur verwijzen wij u graag door naar de <strong>website van de fabrikant</strong>. Daar kunt u eenvoudig een <strong>servicemelding</strong> indienen. <strong>Tip:</strong> Registreer uw apparatuur op de website van de fabrikant. Zo maakt u in de toekomst gemakkelijk gebruik van hun service en profiteert u mogelijk van extra garantie. Komt u er niet uit via de website van de fabrikant? Vul dan ons <a href="https://www.verkade-keukens.nl/service/"><strong>serviceformulier</strong></a> in op onze eigen website. Wij helpen u graag verder.<strong> </strong></p>
+<p><strong>Service voor keukenmeubelen<br />
+</strong>Heeft u een servicevraag over uw keukenmeubelen? Vul dan het <a href="https://www.verkade-keukens.nl/service/"><strong>serviceformulier</strong></a> in op onze website en voeg indien mogelijk een <strong>foto</strong> toe van het probleem.</p>
+</div></div><div class="component mb-15  "><div class="title title-1 fw-700 clr-black-1 text-left">Update</div></div><div class="component mb-15  "><div class="text text-2 fw-400 clr-grey-2 text-left"><p>Per 1 april 2017 heeft Verkade Keukens de service van Baderie van der valk keukens en badkamers in Naaldwijk overgenomen.<br />
+Dit 95 jaar oude gerenommeerde familiebedrijf kenmerkt zich net als Verkade Keukens door persoonlijke aandacht, verassende ontwerpen en absolute topkwaliteit. De keukenafdeling van Baderie van ver Valk in Naaldwijk is per 1 april 2017 uitverkocht.</p>
+<p>U bent voor een zorgeloze badkamer van harte welkom in de showroom van Baderie van der Valk aan de Patijnenburg 4 in Naaldwijk. Vlak naast winkelcentrun De Tuinen. Kijk op <a href="https://baderie-naaldwijk.nl/" target="_blank" rel="noopener">www.baderie-naaldwijk.nl</a> voor alle informatie.</p>
+</div></div></div>															</div>
+
+
+																													</div>
+
+
+
+													</div>
+												</div>
+												
+
+										</div>
+									</div>
+																</div>
+												</div>
+				</div>
+			</div>
+		</div>
+
+		<div class="backgrounds "><div class="background op-100 background-horizontal-left background-vertical-top w-perc-100 h-perc-100 l-perc-0 t-perc-0 "></div></div>	</div>
+
+<script type="text/javascript" nowprocket data-cookieconsent="ignore">var google_maps_key_waas = 'AIzaSyCrO-m_VOMaGx2f46LJ3qqEmC17ugwsPLM&channel=87';</script>
+	<div class="brick brick-maps-1 " >
+		<div class="container none" >
+			<div class="wrapper none">
+				<div class="brick-in">
+					<div class="columns">
+												<div class="column column-2">
+							<div class="column-in">
+								<div class="maps-container">
+
+                                                                        
+                                    <div class="map"
+                                         data-zoom="10"
+                                         data-lat="52.6376442"
+                                         data-lng="4.7471728"
+                                         data-ratio="0.5625"
+                                         data-use-streetview-location="0"
+                                         data-streetview-lat=""
+                                         data-streetview-lng=""
+                                         data-streetview-heading=""
+                                         data-streetview-pitch=""
+                                         data-cluster="false"
+                                                                                 data-map-type="roadmap">
+                                    </div>
+									<div class="es-markers">
+													<div class="es-marker" data-marker-maps="0" data-image=""  data-lat="52.0159466" data-lng="4.2461379" data-width="64" data-height="64">
+
+				<div class="marker-info">
+					<div class="marker-info-columns">
+													<div class="marker-info-column marker-info-column-1">
+								<div class="marker-logo">
+									<div class="marker-logo-in">
+										<img src="https://d2ftqzf4nsbvwq.cloudfront.net/wp-content/uploads/www.verkade-keukens.nl/2019/10/verkade-keukens-logo2021-120x31.png" alt="Verkade Keukens Logo2021 E1618296831962" title="Verkade Keukens Logo2021 E1618296831962"/>
+									</div>
+								</div>
+							</div>
+													<div class="marker-info-column marker-info-column-2">
+							<div class="marker-info-top">
+																<div class="component mb-5"><div class="title title-1 fw-700 clr-black-1 text-left">Verkade Keukens</div></div>								<div class="component mb-15"><div class="text text-3 fw-400 clr-grey-1 text-left"><p><strong>Verkade Keukens</strong><br />
+Mariendijk 115<br />
+2295 LJ Kwintsheul<br />
+KvK: 27235690<br />
+<a tabindex="-1" href="tel:0174630191">0174 &#8211; 63 01 91</a><br />
+<a tabindex="-1" href="mailto:info@verkade-keukens.nl">info@verkade-keukens.nl</a></p>
+</div></div>															</div>
+							<div class="marker-info-bottom">
+								<div class="columns">
+																			<div class="column column-1">
+											<div class="column-in">
+																							</div>
+										</div>
+																				<div class="column column-1">
+											<div class="column-in">
+																							</div>
+										</div>
+																		</div>
+							</div>
+
+						</div>
+					</div>
+				</div>
+
+			</div>
+												</div>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+		<div class="backgrounds "><div class="background op-100 background-horizontal-left background-vertical-top w-perc-100 h-perc-100 l-perc-0 t-perc-0 "></div></div>	</div>
+
+</div><footer class="brick brick-footer-1">
+        <div class="footer-rows">
+        
+                <div class="footer-row">
+
+                    <div class="container container-5 pb-0" >
+                        <div class="wrapper wrapper-1">
+                            <div class="footer-row-in">
+                                <div class="columns" data-columns="4">
+
+                                                                            <div class="column column-1 va-top ">
+                                            <div class="column-in">
+                                                                                            </div>
+                                        </div>
+                                                                                <div class="column column-2 va-top ">
+                                            <div class="column-in">
+                                                                                            </div>
+                                        </div>
+                                                                                <div class="column column-3 va-top ">
+                                            <div class="column-in">
+                                                                                            </div>
+                                        </div>
+                                                                                <div class="column column-4 va-top ">
+                                            <div class="column-in">
+                                                <div class="component-group  component-group-1 component-group-flexible">        <div class="component mb-0  ">
+            <div class="button-group button-group-right button-group-small button" >
+                <div class="component mb-0"><a href="javascript:void(0)" data-jumper-target="top" class="button button-3"><div class="button-in button-primary text-1 fw-500">
+	Naar boven
+	<svg class="waas-icon icon-arrow-up " version="1.1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 32 32">
+<path fill="currentColor" d="M28.256 25.616l-12.256-11.936-12.256 11.936-3.744-3.68 16-15.552 16 15.552z"></path>
+</svg>
+
+</div></a></div>            </div>
+        </div>
+        </div>                                            </div>
+                                        </div>
+                                                                        </div>
+
+
+                            </div>
+                            <div class="clear"></div>
+                        </div>
+
+                    </div>
+                    <div class="backgrounds "><div class="background op-100 background-horizontal-left background-vertical-top w-perc-100 h-perc-100 l-perc-0 t-perc-0 "><div class="background-in background-color bg-primary-2"></div></div></div>
+
+                </div>
+
+                
+                <div class="footer-row">
+
+                    <div class="container container-5 pb-5" >
+                        <div class="wrapper wrapper-1">
+                            <div class="footer-row-in">
+                                <div class="columns" data-columns="4">
+
+                                                                            <div class="column column-1 va-top ">
+                                            <div class="column-in">
+                                                <div class="component-group  component-group-1 component-group-flexible"><div class="component mb-15  "  >
+        <div class="image image-left" >
+        	
+        	        	
+                            <img src="https://d2ftqzf4nsbvwq.cloudfront.net/wp-content/uploads/www.verkade-keukens.nl/2019/10/footer-2022-verkade-keukens.png" width="153" height="41" alt="Footer 2022 Verkade Keukens"  title="Footer 2022 Verkade Keukens"/>
+            
+                    </div>
+
+    </div><div class="component mb-15  "><div class="text text-1 fw-400 clr-grey-4 text-left"><p><strong>Kom langs in onze showroom</strong><br />
+In onze showroom staan ruim dertig keukens in diverse stijlen voor u opgesteld. Van industrieel tot minimalistisch, van stoer hout tot design, de mogelijkheden zijn bijna onbegrensd. Wij geven u graag vrijblijvend advies, zodat u droomkeuken werkelijkheid wordt.</p>
+</div></div><div class="component mb-15  "  >
+        <div class="image image-left" >
+        	
+        	        	
+                            <img src="https://d2ftqzf4nsbvwq.cloudfront.net/wp-content/uploads/www.verkade-keukens.nl/2019/10/Hart-voor-de-Zaak-combi-logo-voluit-PNG.png" width="2071" height="443" alt="Hart Voor De Zaak Combi Logo Voluit Png"  title="Hart Voor De Zaak Combi Logo Voluit Png"/>
+            
+                    </div>
+
+    </div></div>                                            </div>
+                                        </div>
+                                                                                <div class="column column-2 va-top ">
+                                            <div class="column-in">
+                                                <div class="component-group  component-group-1 component-group-flexible"><div class="component mb-5  "><h2 class="title title-1 fw-700 clr-white-1 text-left">Openingstijden</h2></div><div class="component mb-15  "><div class="text text-1 fw-400 clr-grey-4 text-left"><p>Maandag: 13:00 - 17:30<br />
+Dinsdag: 09:00 - 17:30<br />
+Woensdag: 09:00 - 17:30<br />
+Donderdag: 09:00 - 17:30<br />
+Vrijdag: 09:00 - 17:30<br />
+Zaterdag: 09:00 - 16:30</p>
+<p><em>Vrijdagavond alleen geopend<br />
+op afspraak</em></p>
+<p><em>Zie bijzondere openingstijden bij <a href="https://www.verkade-keukens.nl/contact/">contact</a></em></p>
+</div></div></div>                                            </div>
+                                        </div>
+                                                                                <div class="column column-3 va-top ">
+                                            <div class="column-in">
+                                                <div class="component-group  component-group-1 component-group-flexible"><div class="component mb-5  "><h2 class="title title-1 fw-700 clr-white-1 text-left">Contact</h2></div><div class="component mb-10  "><div class="text text-1 fw-400 clr-grey-4 text-left"><p>Verkade Keukens<br />
+<a href="https://www.google.com/maps/place/Verkade+Keukens/@52.0160402,4.2442102,894m/data=!3m2!1e3!4b1!4m6!3m5!1s0x47c5b3c5914bc487:0x2beaee702efdc8a5!8m2!3d52.0160369!4d4.2467851!16s%2Fg%2F1ts_5sgj?entry=ttu&amp;g_ep=EgoyMDI1MDEyOS4xIKXMDSoASAFQAw%3D%3D" target="_blank" rel="noopener">Mariendijk 115</a><br />
+<a href="https://www.google.com/maps/place/Verkade+Keukens/@52.0160402,4.2442102,894m/data=!3m2!1e3!4b1!4m6!3m5!1s0x47c5b3c5914bc487:0x2beaee702efdc8a5!8m2!3d52.0160369!4d4.2467851!16s%2Fg%2F1ts_5sgj?entry=ttu&amp;g_ep=EgoyMDI1MDEyOS4xIKXMDSoASAFQAw%3D%3D" target="_blank" rel="noopener">2295 LJ Kwintsheul</a><br />
+KvK: 27235690<br />
+<a href="tel:0174630191">0174 - 63 01 91</a><br />
+<a href="mailto:info@verkade-keukens.nl" target="_blank" rel="noopener">info@verkade-keukens.nl</a></p>
+</div></div>        <div class="component mb-15  ">
+            <div class="button-group button-group-left" >
+                <div class="component mb-0 "><a href="https://www.google.com/maps/dir//Verkade+Keukens,+Mari%C3%ABndijk+115,+2295+LJ+Kwintsheul/@52.0160369,4.2467851,17z/data=!4m17!1m7!3m6!1s0x47c5b3c5914bc487:0x2beaee702efdc8a5!2sVerkade+Keukens!8m2!3d52.0160369!4d4.2467851!16s%2Fg%2F1ts_5sgj!4m8!1m0!1m5!1m1!1s0x47c5b3c5914bc487:0x2beaee702efdc8a5!2m2!1d4.2468475!2d52.0160543!3e1?entry=ttu&amp;g_ep=EgoyMDI1MDQzMC4xIKXMDSoJLDEwMjExNDUzSAFQAw%3D%3D" target="_blank" class="button-new button-new-7296 hover-none">	
+			<div class="button-hover hover-none"></div>
+			<div class="button-new-in text-2 fw-500 clr-white-1 clr-hover-grey-2 text-left ">
+				
+				Plan uw route
+				<svg class="waas-icon icon-arrow-8-right button-icon-right" version="1.1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 32 32">
+<path fill="currentColor" d="M1.483 32q-0.622 0-1.052-0.454t-0.43-1.028 0.43-1.052l28.987-28.987q0.478-0.478 1.076-0.478t1.052 0.454 0.454 1.052-0.478 1.076l-28.987 28.987q-0.43 0.43-1.052 0.43zM30.469 26.26q-0.622 0-1.052-0.43t-0.43-1.052v-21.764h-21.764q-0.622 0-1.052-0.43t-0.431-1.052 0.431-1.052 1.052-0.43h23.247q0.622 0 1.052 0.43t0.43 1.052v23.247q0 0.622-0.43 1.052t-1.052 0.43z"></path>
+</svg>
+
+			</div>
+		</a></div>            </div>
+        </div>
+        <div class="component mb-0  ">
+    <div class="rest socials-1">
+        <div class="socials socials-follow socials-left clr-grey-4">
+            <div class="socials-in">
+                                            <a rel="nofollow" class="clr-hover-white-1" href="https://www.instagram.com/verkadekeukens/" target="_blank">
+                                <svg class="waas-icon icon-instagram " version="1.1" xmlns="http://www.w3.org/2000/svg"  viewBox="0 0 32 32">
+<path  fill="currentColor" d="M23.193 0h-14.386q-2.398 0-4.412 1.183t-3.165 3.165q-1.215 2.078-1.215 4.476v14.354q0 2.398 1.183 4.428t3.165 3.181q2.046 1.215 4.444 1.215h14.386q2.398 0 4.444-1.215 1.982-1.151 3.165-3.181t1.183-4.428v-14.354q0-2.398-1.215-4.476-1.151-1.982-3.165-3.165t-4.412-1.183zM29.171 23.177q0 1.63-0.799 3.005t-2.174 2.19-3.005 0.815h-14.386q-1.63 0-3.005-0.815t-2.174-2.19-0.799-3.005v-14.354q0-1.63 0.799-3.005t2.174-2.19 3.005-0.815h14.386q1.63 0 3.005 0.815t2.174 2.19 0.799 3.005v14.354zM16 7.768q-2.238 0-4.14 1.103t-3.005 2.989-1.103 4.124 1.103 4.14 3.005 3.005 4.14 1.103 4.14-1.103 3.005-3.005 1.103-4.14-1.103-4.124-3.005-2.989-4.14-1.103zM16 21.419q-1.471 0-2.701-0.735t-1.95-1.982-0.719-2.717 0.719-2.701 1.95-1.95 2.701-0.719 2.717 0.719 1.982 1.95 0.735 2.701-0.735 2.717-1.982 1.982-2.717 0.735zM24.631 5.371q-0.448 0-0.847 0.144t-0.655 0.432q-0.639 0.735-0.639 1.518t0.639 1.423q0.256 0.288 0.655 0.448t0.815 0.16 0.799-0.16 0.671-0.448q0.607-0.671 0.607-1.423t-0.607-1.518q-0.288-0.288-0.671-0.432t-0.767-0.144z"></path>
+</svg>
+                                <span class="hidden">Volg ons op Instagram</span>
+
+                            </a>
+                                                        <a rel="nofollow" class="clr-hover-white-1" href="https://www.facebook.com/verkadekeukens/" target="_blank">
+                                <svg class="waas-icon icon-facebook " version="1.1" xmlns="http://www.w3.org/2000/svg"  viewBox="0 0 32 32">
+<path  fill="currentColor" d="M24.31 0.207v5.138h-3.034q-1.759 0-2.207 0.655-0.621 0.724-0.621 2.103v3.621h5.655l-0.724 5.724h-4.931v14.552h-5.862v-14.552h-4.897v-5.724h4.897v-4.172q0-3.517 1.966-5.586 2.069-1.966 5.379-1.966 2.793 0 4.379 0.207z"></path>
+</svg>
+                                <span class="hidden"></span>
+
+                            </a>
+                                                        <a rel="nofollow" class="clr-hover-white-1" href="https://nl.pinterest.com/verkadekeukens/_created/" target="_blank">
+                                <svg class="waas-icon icon-pinterest " version="1.1" xmlns="http://www.w3.org/2000/svg"  viewBox="0 0 32 32">
+<path  fill="currentColor" d="M3.69 11.517q0-2.069 0.724-3.931t1.948-3.19 2.966-2.379 3.552-1.534 3.879-0.483q3.172 0 5.655 1.31 2.586 1.276 4.31 3.69 1.586 2.414 1.586 5.517 0 1.931-0.379 3.655-0.241 1.448-1.138 3.414-0.897 1.724-1.897 2.828-1.103 1.207-2.828 2.034-1.586 0.724-3.655 0.724-1.276 0-2.552-0.586-1.31-0.724-1.897-1.759-0.241 1.241-0.517 2.207-0.241 1.207-0.397 1.81t-0.431 1.362q-0.207 0.69-0.517 1.345l-0.621 1.207q-0.517 1.034-0.862 1.483l-1.207 1.69-0.276 0.069-0.138-0.138-0.103-1.138q-0.241-2.138-0.241-2.483 0-1.897 0.483-3.966 0.552-2.862 1.276-5.552 0.759-3.034 0.931-3.897-0.586-1.345-0.586-3.31 0-1.552 1.017-2.966t2.534-1.414q1.207 0 1.845 0.793t0.638 2q0 1.448-0.862 3.621-0.793 2.345-0.793 3.603t0.793 2.052q0.931 0.828 2.172 0.828 1 0 1.931-0.552 0.724-0.31 1.483-1.276 0.621-0.828 1.069-1.828 0.31-0.621 0.724-2l0.034-0.138q0.138-0.483 0.276-1.414l0.138-0.793q0.138-1.276 0.138-1.862 0-3.207-2.172-5.172-2.138-1.828-5.448-1.828-3.862 0-6.483 2.517-1.241 1.207-1.897 2.793t-0.655 3.448q0 0.966 0.276 1.69 0.138 0.483 0.448 1.138l0.034 0.069q0.103 0.172 0.276 0.483l0.31 0.552q0.207 0.345 0.207 0.448 0 0.448-0.345 1.414-0.172 0.448-0.31 0.672t-0.345 0.224l-0.069-0.034q-0.138-0.034-0.276-0.034-0.931-0.276-1.759-1.103-0.655-0.655-1.138-1.793-0.448-0.897-0.69-2.103-0.172-1.138-0.172-2.034z"></path>
+</svg>
+                                <span class="hidden">Volg ons op Pinterest</span>
+
+                            </a>
+                                        </div>
+        </div>
+    </div>
+</div>
+
+</div>                                            </div>
+                                        </div>
+                                                                                <div class="column column-4 va-top ">
+                                            <div class="column-in">
+                                                <div class="component-group  component-group-1 component-group-flexible"><div class="component mb-5  "><h2 class="title title-1 fw-700 clr-white-1 text-left">Lees meer</h2></div>    <div class="component mb-15  ">
+        <div class="rest links-1">
+            <div class="links links-left  links-type-block links-reversed text-1 fw-400 clr-grey-4">
+                <div class="links-in">
+                                                <a href="https://www.verkade-keukens.nl/keukens/" target="" class="link">
+                                <div class="link-text">
+                                    Keukens                                </div>
+                            </a>
+                                                        <a href="https://www.verkade-keukens.nl/inspiratie/" target="" class="link">
+                                <div class="link-text">
+                                    Inspiratie                                </div>
+                            </a>
+                                                        <a href="https://www.verkade-keukens.nl/over-ons/" target="" class="link">
+                                <div class="link-text">
+                                    Over ons                                </div>
+                            </a>
+                                                        <a href="https://www.verkade-keukens.nl/reviews/" target="" class="link">
+                                <div class="link-text">
+                                    Reviews                                </div>
+                            </a>
+                                                        <a href="https://www.verkade-keukens.nl/contact/" target="" class="link">
+                                <div class="link-text">
+                                    Contact                                </div>
+                            </a>
+                                                        <a href="https://www.verkade-keukens.nl/service/" target="" class="link">
+                                <div class="link-text">
+                                    Storing service                                </div>
+                            </a>
+                                                        <a href="https://www.verkade-keukens.nl/vacature/" target="" class="link">
+                                <div class="link-text">
+                                    Vacatures                                </div>
+                            </a>
+                                            </div>
+            </div>
+        </div>
+    </div>
+    </div>                                            </div>
+                                        </div>
+                                                                        </div>
+
+
+                            </div>
+                            <div class="clear"></div>
+                        </div>
+
+                    </div>
+                    <div class="backgrounds "><div class="background op-100 background-horizontal-left background-vertical-top w-perc-100 h-perc-100 l-perc-0 t-perc-0 "><div class="background-in background-color bg-primary-2"></div></div></div>
+
+                </div>
+
+                
+                <div class="footer-row">
+
+                    <div class="container none pt-10 pb-10" >
+                        <div class="wrapper wrapper-1">
+                            <div class="footer-row-in">
+                                <div class="columns" data-columns="2">
+
+                                                                            <div class="column column-1 va-middle ">
+                                            <div class="column-in">
+                                                <div class="component-group  component-group-1 component-group-flexible"><div class="component mb-0  "><div class="text text-1 fw-700 clr-white-1 text-left"><p>© 2025 - Verkade Keukens</p>
+</div></div></div>                                            </div>
+                                        </div>
+                                                                                <div class="column column-2 va-middle ">
+                                            <div class="column-in">
+                                                <div class="component-group  component-group-1 component-group-flexible">    <div class="component mb-15  tablet-hide mobile-hide">
+        <div class="rest links-1">
+            <div class="links links-right  links-type-inline links-reversed text-1 fw-400 clr-white-1">
+                <div class="links-in">
+                                                <a href="https://www.verkade-keukens.nl/privacyverklaring/" target="" class="link">
+                                <div class="link-text">
+                                    Privacyverklaring                                </div>
+                            </a>
+                                                        <a href="https://d2ftqzf4nsbvwq.cloudfront.net/wp-content/uploads/www.verkade-keukens.nl/2024/01/Algemene_voorwaarden_-_CBW_erkend.pdf" target="_blank" class="link">
+                                <div class="link-text">
+                                    Algemene voorwaarden                                </div>
+                            </a>
+                                            </div>
+            </div>
+        </div>
+    </div>
+        <div class="component mb-15  desktop-hide">
+        <div class="rest links-1">
+            <div class="links links-left  links-type-block links-reversed text-1 fw-400 clr-white-1">
+                <div class="links-in">
+                                                <a href="https://www.verkade-keukens.nl/privacyverklaring/" target="" class="link">
+                                <div class="link-text">
+                                    Privacyverklaring                                </div>
+                            </a>
+                                                        <a href="https://d2ftqzf4nsbvwq.cloudfront.net/wp-content/uploads/www.verkade-keukens.nl/2024/01/Algemene_voorwaarden_-_CBW_erkend.pdf" target="_blank" class="link">
+                                <div class="link-text">
+                                    Algemene voorwaarden                                </div>
+                            </a>
+                                            </div>
+            </div>
+        </div>
+    </div>
+    </div>                                            </div>
+                                        </div>
+                                                                        </div>
+
+
+                            </div>
+                            <div class="clear"></div>
+                        </div>
+
+                    </div>
+                    <div class="backgrounds "><div class="background op-100 background-horizontal-left background-vertical-top w-perc-100 h-perc-100 l-perc-0 t-perc-0 "><div class="background-in background-color bg-primary-2"></div></div></div>
+
+                </div>
+
+                    </div>
+    
+
+</footer>
+</div></div>
+
+<div class="sidebars">
+    
+    <div class="sidebar sidebar-right sidebar-large" data-sidebar="button-content">
+        <div class="sidebar-close clr-white-1 bg-secondary-2">
+            <svg class="waas-icon icon-cross " version="1.1" xmlns="http://www.w3.org/2000/svg"  viewBox="0 0 32 32">
+<path  fill="currentColor" d="M31.982 2.622q0 1.24-0.744 1.878l-11.446 11.482 11.446 11.517q0.744 0.744 0.744 1.843 0 1.24-0.744 1.878-0.673 0.78-1.843 0.78t-1.985-0.709l-11.411-11.482-11.411 11.482q-0.815 0.709-1.984 0.709t-1.843-0.78q-0.744-0.638-0.744-1.878 0-1.099 0.744-1.843l11.446-11.517-11.446-11.482q-0.744-0.744-0.744-1.914t0.744-1.807q0.673-0.78 1.843-0.78t1.985 0.709l11.411 11.482 11.411-11.482q0.815-0.709 1.985-0.709t1.843 0.78q0.744 0.638 0.744 1.843z"></path>
+</svg>
+        </div>
+        <div class="sidebar-in bg-white-1">
+            <div class="box box-none">
+                <div class="sidebar-content"></div>
+            </div>
+        </div>
+    </div>
+
+
+    <div class="sidebar sidebar-left sidebar-small" data-sidebar="posts-filter">
+        <div class="sidebar-close bg-white-1 clr-primary-2">
+            <svg class="waas-icon icon-cross " version="1.1" xmlns="http://www.w3.org/2000/svg"  viewBox="0 0 32 32">
+<path  fill="currentColor" d="M31.982 2.622q0 1.24-0.744 1.878l-11.446 11.482 11.446 11.517q0.744 0.744 0.744 1.843 0 1.24-0.744 1.878-0.673 0.78-1.843 0.78t-1.985-0.709l-11.411-11.482-11.411 11.482q-0.815 0.709-1.984 0.709t-1.843-0.78q-0.744-0.638-0.744-1.878 0-1.099 0.744-1.843l11.446-11.517-11.446-11.482q-0.744-0.744-0.744-1.914t0.744-1.807q0.673-0.78 1.843-0.78t1.985 0.709l11.411 11.482 11.411-11.482q0.815-0.709 1.985-0.709t1.843 0.78q0.744 0.638 0.744 1.843z"></path>
+</svg>
+        </div>
+        <div class="sidebar-in bg-white-1">
+        	<div class="box box-1">
+        		<div class="sidebar-content"></div>
+        	</div>
+        </div>
+   	</div>
+
+   	<div class="sidebar sidebar-left sidebar-small" data-sidebar="products-filter">
+        <div class="sidebar-close bg-white-1 clr-primary-2">
+            <svg class="waas-icon icon-cross " version="1.1" xmlns="http://www.w3.org/2000/svg"  viewBox="0 0 32 32">
+<path  fill="currentColor" d="M31.982 2.622q0 1.24-0.744 1.878l-11.446 11.482 11.446 11.517q0.744 0.744 0.744 1.843 0 1.24-0.744 1.878-0.673 0.78-1.843 0.78t-1.985-0.709l-11.411-11.482-11.411 11.482q-0.815 0.709-1.984 0.709t-1.843-0.78q-0.744-0.638-0.744-1.878 0-1.099 0.744-1.843l11.446-11.517-11.446-11.482q-0.744-0.744-0.744-1.914t0.744-1.807q0.673-0.78 1.843-0.78t1.985 0.709l11.411 11.482 11.411-11.482q0.815-0.709 1.985-0.709t1.843 0.78q0.744 0.638 0.744 1.843z"></path>
+</svg>
+        </div>
+        <div class="sidebar-in bg-white-1">
+        	<div class="box box-1">
+        		<div class="sidebar-content"></div>
+        	</div>
+        </div>
+   	</div>
+
+
+   	<div class="sidebar sidebar-left sidebar-small" data-sidebar="info">
+        <div class="sidebar-close bg-white-1 clr-primary-2">
+            <svg class="waas-icon icon-cross " version="1.1" xmlns="http://www.w3.org/2000/svg"  viewBox="0 0 32 32">
+<path  fill="currentColor" d="M31.982 2.622q0 1.24-0.744 1.878l-11.446 11.482 11.446 11.517q0.744 0.744 0.744 1.843 0 1.24-0.744 1.878-0.673 0.78-1.843 0.78t-1.985-0.709l-11.411-11.482-11.411 11.482q-0.815 0.709-1.984 0.709t-1.843-0.78q-0.744-0.638-0.744-1.878 0-1.099 0.744-1.843l11.446-11.517-11.446-11.482q-0.744-0.744-0.744-1.914t0.744-1.807q0.673-0.78 1.843-0.78t1.985 0.709l11.411 11.482 11.411-11.482q0.815-0.709 1.985-0.709t1.843 0.78q0.744 0.638 0.744 1.843z"></path>
+</svg>
+        </div>
+        <div class="sidebar-in bg-white-1">
+        	<div class="box box-1">
+        		<div class="sidebar-content"></div>
+        	</div>
+        </div>
+   	</div>
+
+   	<div class="sidebar sidebar-right sidebar-medium" data-sidebar="products-option">
+        <div class="sidebar-close bg-white-1 clr-primary-2">
+            <svg class="waas-icon icon-cross " version="1.1" xmlns="http://www.w3.org/2000/svg"  viewBox="0 0 32 32">
+<path  fill="currentColor" d="M31.982 2.622q0 1.24-0.744 1.878l-11.446 11.482 11.446 11.517q0.744 0.744 0.744 1.843 0 1.24-0.744 1.878-0.673 0.78-1.843 0.78t-1.985-0.709l-11.411-11.482-11.411 11.482q-0.815 0.709-1.984 0.709t-1.843-0.78q-0.744-0.638-0.744-1.878 0-1.099 0.744-1.843l11.446-11.517-11.446-11.482q-0.744-0.744-0.744-1.914t0.744-1.807q0.673-0.78 1.843-0.78t1.985 0.709l11.411 11.482 11.411-11.482q0.815-0.709 1.985-0.709t1.843 0.78q0.744 0.638 0.744 1.843z"></path>
+</svg>
+        </div>
+        <div class="sidebar-in bg-white-1">
+        	<div class="box box-1">
+        		<div class="sidebar-content"></div>
+        	</div>
+        </div>
+   	</div>
+
+    
+
+
+</div>
+
+<div class="notifications">
+    <div class="notifications-templates">
+        <div class="notification-notice">
+            <div class="notification bg-grey-4 text-1 clr-white-1 fw-700"></div>
+        </div>
+
+        <div class="notification-error">
+            <div class="notification bg-red-1 text-1 clr-black-1 fw-700"></div>
+        </div>
+
+        <div class="notification-success">
+            <div class="notification bg-green-1 text-1 clr-black-1 fw-700"></div>
+        </div>
+
+    </div>
+    <div class="notifications-ticker notifications-ticker-right notifications-ticker-top" data-notifications-close="4000" data-notifications-effect="fade" data-notifications-duration="1000"></div>
+</div><script type="application/ld+json">{"@context":"http:\/\/schema.org","@type":"Organization","url":"https:\/\/www.verkade-keukens.nl","name":"Verkade Keukendesign","address":{"@type":"PostalAddress","addressRegion":"Kwintsheul","postalCode":"2295 LJ","streetAddress":"Mariendijk 115 "},"contactPoint":{"@type":"ContactPoint","email":"info@verkade-keukens.nl","telephone":"0174 - 63 01 91"}}</script><script data-minify="1" type="text/javascript" src="https://d2ftqzf4nsbvwq.cloudfront.net/wp-content/cache/www.verkade-keukens.nl/min/1/wp-content/themes/bz-waas/assets/javascripts/parts/packages/custom-webshop-middle.js?ver=1751959190" nowprocket data-cookieconsent="ignore" data-rocket-defer defer></script><script type="speculationrules" data-cookieconsent="ignore">
+{"prefetch":[{"source":"document","where":{"and":[{"href_matches":"\/*"},{"not":{"href_matches":["\/wp-*.php","\/wp-admin\/*","\/wp-content\/uploads\/www.verkade-keukens.nl\/*","\/wp-content\/*","\/wp-content\/plugins\/*","\/wp-content\/themes\/bz-waas\/*","\/*\\?(.+)"]}},{"not":{"selector_matches":"a[rel~=\"nofollow\"]"}},{"not":{"selector_matches":".no-prefetch, .no-prefetch a"}}]},"eagerness":"conservative"}]}
+</script>
+    <script type='text/javascript' nowprocket data-cookieconsent="ignore">
+      jQuery(document).ready(function ($) {
+        var gforms = '.gform_wrapper form';
+        jQuery(document).on('submit', gforms, function () {
+          showLoader();
+          if (jQuery(this).find('input[name="gf_zero_spam_key"]').length) {
+            jQuery(this).find('input[name="gf_zero_spam_key"]').remove();
+          }
+
+
+          jQuery('<input>').attr('type', 'hidden')
+            .attr('name', 'gf_zero_spam_key')
+            .attr('value', 'tk89tTXNXRCSBVOiIyj3wXhdLNWkiggZRSFMGeanx6owZXvMZhb1ufwEm73BxLcw')
+            .appendTo(jQuery(this));
+          return true;
+        });
+      });
+    </script>
+    <script type="text/javascript" id="facebook-capi-js-extra" data-cookieconsent="ignore">
+/* <![CDATA[ */
+var facebook_capi = {"ajax_url":"https:\/\/www.verkade-keukens.nl\/wp-admin\/admin-ajax.php","pixel_id":"1089116566311854","nonce":"574ad5c6a1"};
+/* ]]> */
+</script>
+<script data-minify="1" type="text/javascript" src="https://d2ftqzf4nsbvwq.cloudfront.net/wp-content/cache/www.verkade-keukens.nl/min/1/wp-content/themes/bz-waas/assets/javascripts/parts/functions/custom-facebook-capi.js?ver=1751979290" id="facebook-capi-js" data-cookieconsent="ignore" data-rocket-defer defer></script>
+<script type="text/javascript" src="https://d2ftqzf4nsbvwq.cloudfront.net/wp-includes/js/dist/dom-ready.min.js?ver=f77871ff7694fffea381" id="wp-dom-ready-js" data-cookieconsent="ignore"></script>
+<script type="text/javascript" src="https://d2ftqzf4nsbvwq.cloudfront.net/wp-includes/js/dist/hooks.min.js?ver=4d63a3d491d11ffd8ac6" id="wp-hooks-js" data-cookieconsent="ignore"></script>
+<script type="text/javascript" src="https://d2ftqzf4nsbvwq.cloudfront.net/wp-includes/js/dist/i18n.min.js?ver=5e580eb46a90c2b997e6" id="wp-i18n-js" data-cookieconsent="ignore"></script>
+<script type="text/javascript" id="wp-i18n-js-after" data-cookieconsent="ignore">
+/* <![CDATA[ */
+wp.i18n.setLocaleData( { 'text direction\u0004ltr': [ 'ltr' ] } );
+/* ]]> */
+</script>
+<script type="text/javascript" id="wp-a11y-js-translations" data-cookieconsent="ignore">
+/* <![CDATA[ */
+( function( domain, translations ) {
+	var localeData = translations.locale_data[ domain ] || translations.locale_data.messages;
+	localeData[""].domain = domain;
+	wp.i18n.setLocaleData( localeData, domain );
+} )( "default", {"translation-revision-date":"2025-07-08 15:02:25+0000","generator":"GlotPress\/4.0.1","domain":"messages","locale_data":{"messages":{"":{"domain":"messages","plural-forms":"nplurals=2; plural=n != 1;","lang":"nl"},"Notifications":["Meldingen"]}},"comment":{"reference":"wp-includes\/js\/dist\/a11y.js"}} );
+/* ]]> */
+</script>
+<script type="text/javascript" src="https://d2ftqzf4nsbvwq.cloudfront.net/wp-includes/js/dist/a11y.min.js?ver=3156534cc54473497e14" id="wp-a11y-js" data-cookieconsent="ignore"></script>
+<script type="text/javascript" defer='defer' src="https://d2ftqzf4nsbvwq.cloudfront.net/wp-content/plugins/gravityforms/js/jquery.json.min.js?ver=2.9.9" id="gform_json-js" data-cookieconsent="ignore"></script>
+<script type="text/javascript" id="gform_gravityforms-js-extra" data-cookieconsent="ignore">
+/* <![CDATA[ */
+var gform_i18n = {"datepicker":{"days":{"monday":"Ma","tuesday":"Di","wednesday":"Wo","thursday":"Do","friday":"Vr","saturday":"Za","sunday":"Zo"},"months":{"january":"Januari","february":"Februari","march":"Maart","april":"April","may":"Mei","june":"Juni","july":"Juli","august":"Augustus","september":"September","october":"Oktober","november":"November","december":"December"},"firstDay":1,"iconText":"Selecteer een datum"}};
+var gf_legacy_multi = [];
+var gform_gravityforms = {"strings":{"invalid_file_extension":"Dit bestandstype is niet toegestaan. Moet \u00e9\u00e9n van de volgende zijn:","delete_file":"Dit bestand verwijderen","in_progress":"in behandeling","file_exceeds_limit":"Bestand overschrijdt limiet bestandsgrootte","illegal_extension":"Dit type bestand is niet toegestaan.","max_reached":"Maximale aantal bestanden bereikt","unknown_error":"Er was een probleem bij het opslaan van het bestand op de server","currently_uploading":"Wacht tot het uploaden is voltooid","cancel":"Annuleren","cancel_upload":"Deze upload annuleren","cancelled":"Geannuleerd"},"vars":{"images_url":"https:\/\/www.verkade-keukens.nl\/wp-content\/plugins\/gravityforms\/images"}};
+var gf_global = {"gf_currency_config":{"name":"Euro","symbol_left":"","symbol_right":"&#8364;","symbol_padding":" ","thousand_separator":".","decimal_separator":",","decimals":2,"code":"EUR"},"base_url":"https:\/\/www.verkade-keukens.nl\/wp-content\/plugins\/gravityforms","number_formats":[],"spinnerUrl":"https:\/\/www.verkade-keukens.nl\/wp-content\/plugins\/gravityforms\/images\/spinner.svg","version_hash":"5e8067e1d0ae0e28c4c6e4ad2148c2a5","strings":{"newRowAdded":"Nieuwe rij toegevoegd.","rowRemoved":"Rij verwijderd","formSaved":"Het formulier is opgeslagen. De inhoud bevat de link om terug te keren en het formulier in te vullen."}};
+/* ]]> */
+</script>
+<script type="text/javascript" defer='defer' src="https://d2ftqzf4nsbvwq.cloudfront.net/wp-content/plugins/gravityforms/js/gravityforms.min.js?ver=2.9.9" id="gform_gravityforms-js" data-cookieconsent="ignore"></script>
+<script type="text/javascript" defer='defer' src="https://d2ftqzf4nsbvwq.cloudfront.net/wp-content/plugins/gravityforms/assets/js/dist/utils.min.js?ver=d1f4caf9d41e0123f387bd5029d08d19" id="gform_gravityforms_utils-js" data-cookieconsent="ignore"></script>
+<script type="text/javascript" defer='defer' src="https://d2ftqzf4nsbvwq.cloudfront.net/wp-content/plugins/gravityforms/assets/js/dist/vendor-theme.min.js?ver=639b4ac21c17c9dc304b05db4a3d3293" id="gform_gravityforms_theme_vendors-js" data-cookieconsent="ignore"></script>
+<script type="text/javascript" id="gform_gravityforms_theme-js-extra" data-cookieconsent="ignore">
+/* <![CDATA[ */
+var gform_theme_config = {"common":{"form":{"honeypot":{"version_hash":"5e8067e1d0ae0e28c4c6e4ad2148c2a5"},"ajax":{"ajaxurl":"https:\/\/www.verkade-keukens.nl\/wp-admin\/admin-ajax.php","ajax_submission_nonce":"fc9d607fec","i18n":{"step_announcement":"Stap %1$s van %2$s, %3$s","unknown_error":"Er was een onbekende fout bij het verwerken van je aanvraag. Probeer het opnieuw."}}}},"hmr_dev":"","public_path":"https:\/\/www.verkade-keukens.nl\/wp-content\/plugins\/gravityforms\/assets\/js\/dist\/","config_nonce":"51955446f2"};
+/* ]]> */
+</script>
+<script type="text/javascript" defer='defer' src="https://d2ftqzf4nsbvwq.cloudfront.net/wp-content/plugins/gravityforms/assets/js/dist/scripts-theme.min.js?ver=a03ce3f2bb8ade39a4d8ce11e0846a7f" id="gform_gravityforms_theme-js" data-cookieconsent="ignore"></script>
+<script type="text/javascript" data-cookieconsent="ignore">
+/* <![CDATA[ */
+ gform.initializeOnLoaded( function() { jQuery(document).on('gform_post_render', function(event, formId, currentPage){if(formId == 4) {} } );jQuery(document).on('gform_post_conditional_logic', function(event, formId, fields, isInit){} ) } ); 
+/* ]]> */
+</script>
+<script type="text/javascript" data-cookieconsent="ignore">
+/* <![CDATA[ */
+ gform.initializeOnLoaded( function() {jQuery(document).trigger("gform_pre_post_render", [{ formId: "4", currentPage: "1", abort: function() { this.preventDefault(); } }]);                if (event && event.defaultPrevented) {                return;         }        const gformWrapperDiv = document.getElementById( "gform_wrapper_4" );        if ( gformWrapperDiv ) {            const visibilitySpan = document.createElement( "span" );            visibilitySpan.id = "gform_visibility_test_4";            gformWrapperDiv.insertAdjacentElement( "afterend", visibilitySpan );        }        const visibilityTestDiv = document.getElementById( "gform_visibility_test_4" );        let postRenderFired = false;                function triggerPostRender() {            if ( postRenderFired ) {                return;            }            postRenderFired = true;            gform.core.triggerPostRenderEvents( 4, 1 );            if ( visibilityTestDiv ) {                visibilityTestDiv.parentNode.removeChild( visibilityTestDiv );            }        }        function debounce( func, wait, immediate ) {            var timeout;            return function() {                var context = this, args = arguments;                var later = function() {                    timeout = null;                    if ( !immediate ) func.apply( context, args );                };                var callNow = immediate && !timeout;                clearTimeout( timeout );                timeout = setTimeout( later, wait );                if ( callNow ) func.apply( context, args );            };        }        const debouncedTriggerPostRender = debounce( function() {            triggerPostRender();        }, 200 );        if ( visibilityTestDiv && visibilityTestDiv.offsetParent === null ) {            const observer = new MutationObserver( ( mutations ) => {                mutations.forEach( ( mutation ) => {                    if ( mutation.type === 'attributes' && visibilityTestDiv.offsetParent !== null ) {                        debouncedTriggerPostRender();                        observer.disconnect();                    }                });            });            observer.observe( document.body, {                attributes: true,                childList: false,                subtree: true,                attributeFilter: [ 'style', 'class' ],            });        } else {            triggerPostRender();        }    } ); 
+/* ]]> */
+</script>
+<script data-minify="1" type="text/javascript" src="https://d2ftqzf4nsbvwq.cloudfront.net/wp-content/cache/www.verkade-keukens.nl/min/1/wp-content/themes/bz-waas/assets/javascripts/parts/functions/custom-cookie.js?ver=1751959190" data-cookieconsent="ignore" data-rocket-defer defer></script><script data-minify="1" type="text/javascript" src="https://d2ftqzf4nsbvwq.cloudfront.net/wp-content/cache/www.verkade-keukens.nl/min/1/wp-content/themes/bz-waas/assets/javascripts/parts/blocks/custom-maps.js?ver=1751974772" data-cookieconsent="ignore" data-rocket-defer defer></script><script data-minify="1" type="text/javascript" src="https://d2ftqzf4nsbvwq.cloudfront.net/wp-content/cache/www.verkade-keukens.nl/min/1/wp-content/themes/bz-waas/assets/essentials/es-animation.js?ver=1751959190" data-cookieconsent="ignore" data-rocket-defer defer></script><script data-minify="1" type="text/javascript" src="https://d2ftqzf4nsbvwq.cloudfront.net/wp-content/cache/www.verkade-keukens.nl/min/1/wp-content/themes/bz-waas/assets/essentials/es-sticky.js?ver=1751959190" data-cookieconsent="ignore" data-rocket-defer defer></script><script data-minify="1" type="text/javascript" src="https://d2ftqzf4nsbvwq.cloudfront.net/wp-content/cache/www.verkade-keukens.nl/min/1/wp-content/themes/bz-waas/assets/essentials/es-jumper.js?ver=1751959190" data-cookieconsent="ignore" data-rocket-defer defer></script><script data-minify="1" type="text/javascript" src="https://d2ftqzf4nsbvwq.cloudfront.net/wp-content/cache/www.verkade-keukens.nl/min/1/wp-content/themes/bz-waas/assets/essentials/es-equal.js?ver=1751959190" data-cookieconsent="ignore" data-rocket-defer defer></script><script data-minify="1" type="text/javascript" src="https://d2ftqzf4nsbvwq.cloudfront.net/wp-content/cache/www.verkade-keukens.nl/min/1/wp-content/themes/bz-waas/assets/essentials/es-maps.js?ver=1751974773" data-cookieconsent="ignore" data-rocket-defer defer></script><script data-minify="1" type="text/javascript" src="https://d2ftqzf4nsbvwq.cloudfront.net/wp-content/cache/www.verkade-keukens.nl/min/1/wp-content/themes/bz-waas/assets/essentials/es-loader.js?ver=1751959190" data-cookieconsent="ignore" data-rocket-defer defer></script>    <link data-minify="1" href="https://d2ftqzf4nsbvwq.cloudfront.net/wp-content/cache/www.verkade-keukens.nl/min/1/wp-content/themes/bz-waas/assets/stylesheets/common/hover.css?ver=1751959190" rel="preload" as="style" onload="this.rel='stylesheet'">
+    <noscript><link data-minify="1" rel="stylesheet" href="https://d2ftqzf4nsbvwq.cloudfront.net/wp-content/cache/www.verkade-keukens.nl/min/1/wp-content/themes/bz-waas/assets/stylesheets/common/hover.css?ver=1751959190"></noscript>
+    </body>
+</html>
+<!-- This website is like a Rocket, isn't it? Performance optimized by WP Rocket. Learn more: https://wp-rocket.me - Debug: cached@1752063529 -->
